@@ -31,3 +31,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.mule.tooling.analytics 1 0 2023-11-14 11:47:56.490
 !MESSAGE Analytics enable property is set with true
+
+!ENTRY org.mule.tooling.core 1 0 2023-11-14 11:52:07.550
+!MESSAGE While generating classpath found that C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\AnypointStudio-for-win-64bit-6.6.11-202212061653\AnypointStudio\plugins\org.mule.tooling.server.3.9.5.ee_6.6.4.202212061409\mule\lib\endorsed\ is not a directory.
+
+!ENTRY org.mule.tooling.core 1 0 2023-11-14 11:52:07.550
+!MESSAGE While generating classpath found that C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\AnypointStudio-for-win-64bit-6.6.11-202212061653\AnypointStudio\plugins\org.mule.tooling.server.3.9.5.ee_6.6.4.202212061409\mule\lib\endorsed\ is not a directory.
