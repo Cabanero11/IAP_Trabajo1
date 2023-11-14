@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "OFSP-MAP"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "OFSP-XML"
+        }
+    },
+    "id": "ec84333b-e19a-4f31-93b2-6e061df5900e",
+    "version": "5.2.0.0"
+}

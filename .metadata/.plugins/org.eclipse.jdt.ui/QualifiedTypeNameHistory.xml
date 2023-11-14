@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.mule.transformer.AbstractMessageTransformer"/>
+<fullyQualifiedTypeName name="org.mule.api.MuleMessage"/>
+<fullyQualifiedTypeName name="javax.xml.transform.TransformerException"/>
+<fullyQualifiedTypeName name="org.dom4j.DocumentException"/>
+<fullyQualifiedTypeName name="org.dom4j.DocumentHelper"/>
+<fullyQualifiedTypeName name="com.sun.xml.txw2.Document"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.dom4j.Node"/>
+<fullyQualifiedTypeName name="org.json.JSONArray"/>
+<fullyQualifiedTypeName name="org.json.JSONObject"/>
+<fullyQualifiedTypeName name="org.dom4j.Document"/>
+<fullyQualifiedTypeName name="org.apache.xmlbeans.impl.common.DocumentHelper"/>
+<fullyQualifiedTypeName name="org.dom4j.Element"/>
+</qualifiedTypeNameHistroy>

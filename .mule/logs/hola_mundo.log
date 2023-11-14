@@ -1,0 +1,43 @@
+2023-09-22 13:29:25,944 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'hola_mundo'                            +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-09-22 13:29:26,836 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-09-22 13:29:26,977 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-09-22 13:29:27,135 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-09-22 13:29:27,135 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-09-22 13:29:27,225 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2c0dca15: startup date [Fri Sep 22 13:29:27 CEST 2023]; root of context hierarchy
+2023-09-22 13:29:30,601 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-09-22 13:29:31,462 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-09-22 13:29:31,993 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\hola_mundo\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\hola_mundo\queue-tx-log\tx2.log
+2023-09-22 13:29:32,010 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\hola_mundo\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\hola_mundo\queue-xa-tx-log\tx2.log
+2023-09-22 13:29:32,120 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-09-22 13:29:32,120 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: hola_mundoFlow
+2023-09-22 13:29:32,120 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7fd32c56
+2023-09-22 13:29:32,152 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: hola_mundoFlow.stage1
+2023-09-22 13:29:32,406 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\hola_mundo\hola_mundo.xml'}]"
+2023-09-22 13:29:32,406 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\hola_mundo\hola_mundo.xml'}]"
+2023-09-22 13:29:32,422 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-09-22 13:29:32,422 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'hola_mundo'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-09-22 13:29:32,491 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-09-22 13:29:32,491 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-09-22 13:29:32,547 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8081
+2023-09-22 13:29:32,547 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-09-22 13:29:32,547 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: hola_mundoFlow
+2023-09-22 13:29:32,547 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: hola_mundoFlow.stage1
+2023-09-22 13:29:32,674 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-09-22 13:29:37,664 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: hola_mundo                                            *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   JMX Agent                                                        *
+*   Batch module default engine                                      *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-09-22 13:30:04,348 [[hola_mundo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - No listener found for request: (GET)/favicon.ico
+2023-09-22 13:30:04,348 [[hola_mundo].HTTP_Listener_Configuration.worker.01] INFO  org.mule.module.http.internal.listener.HttpListenerRegistry - Available listeners are: [(*)/bienvenida/]

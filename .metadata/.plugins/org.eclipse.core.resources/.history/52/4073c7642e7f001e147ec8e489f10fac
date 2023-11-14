@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<http:request-config name="HTTP_Request_Configuration" host="IAP-120-2022.dsicv.upv.es" port="8081" basePath="comptabilitat" doc:name="HTTP Request Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration1" host="IAP-120-2022.dsicv.upv.es" port="8081" basePath="produccion" doc:name="HTTP Request Configuration"/>
+	<flow name="Flujo1EnviarOrdenesFabricacion">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="5" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/encomandes" method="GET" doc:name="Obtener OF"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<echo-component doc:name="Echo"/>
+		<flow-ref name="smartfactorysesion7Flow" doc:name="Flow Reference"/>
+	</flow>
+	<flow name="smartfactorysesion7Flow">
+		<dw:transform-message doc:name="OFSP/CSV a OFSP/MAP" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
+			<dw:input-payload mimeType="application/csv">
+				<dw:reader-property name="header" value="false"/>
+			</dw:input-payload>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	id: payload.id,
+	producto: payload.producto,
+	uds: payload.unidades,
+	longitud: payload.velocidad,
+	vel: payload.longitud
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<foreach doc:name="For Each">
+			<dw:transform-message doc:name="Copy_of_OFSP/MAP a OFSP/XML" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
+				<dw:input-payload mimeType="application/java"/>
+				<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	OrdenFabricacion @(id: payload.id): {
+		producto: payload.producto,
+		unidades: payload.uds+ payload.uds,
+		longitud: payload.vel,
+		velocidad: payload.longitud
+	},
+	id: payload.id,
+	producto: payload.producto,
+	uds: payload.unidades,
+	longitud: payload.velocidad,
+	vel: payload.longitud
+}]]></dw:set-payload>
+			</dw:transform-message>
+			<http:request config-ref="HTTP_Request_Configuration" path="" method="" doc:name="Enviar a Sistema de producto"/>
+		</foreach>
+	</flow>
+	<flow name="smartfactorysesion7Flow1">
+		<poll doc:name="Poll">
+			<http:request config-ref="HTTP_Request_Configuration1" path="/nuevaOrden" method="GET" doc:name="Coger comandas de nuevOrden"/>
+		</poll>
+		<object-to-string-transformer doc:name="Copy_of_Object to String"/>
+		<flow-ref name="smartfactorysesion7Flow2" doc:name="Flow Reference"/>
+	</flow>
+	<flow name="smartfactorysesion7Flow3">
+		<dw:transform-message doc:name="OFSP/JSON a OFSP/CSV">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<flow-ref name="smartfactorysesion7Flow" doc:name="Flow Reference"/>
+	</flow>
+	<flow name="smartfactorysesion7Flow2">
+		<ftp:inbound-endpoint host="localhost" port="21" passive="true" responseTimeout="10000" doc:name="FTP"/>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<dw:transform-message doc:name="Copy_of_OFSP/JSON a OFSP/CSV" metadata:id="46dcaccb-46ae-4f3a-9b03-fc7dff4670cb">
+			<dw:input-payload mimeType="application/csv"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	OrdenFabricacion @(id: payload.id): {
+		producto: payload.producto as :number,
+		unidades: payload.unidades as :number,
+		longitud: payload.longitud as :number,
+		velocidad: payload.velocidad as :number
+	}
+}]]></dw:set-payload>
+		</dw:transform-message>
+	</flow>
+</mule>

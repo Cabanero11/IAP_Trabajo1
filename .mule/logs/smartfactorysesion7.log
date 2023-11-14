@@ -1,0 +1,1438 @@
+2023-10-24 11:45:26,705 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'smartfactorysesion7'                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-10-24 11:45:26,986 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-10-24 11:45:27,033 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-10-24 11:45:27,080 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-10-24 11:45:27,080 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-10-24 11:45:27,111 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2da5fdc: startup date [Tue Oct 24 11:45:27 CEST 2023]; root of context hierarchy
+2023-10-24 11:45:28,074 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-10-24 11:45:28,967 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-10-24 11:45:29,083 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-tx-log\tx2.log
+2023-10-24 11:45:29,091 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-xa-tx-log\tx2.log
+2023-10-24 11:45:29,091 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.polling.mule.default
+2023-10-24 11:45:29,200 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-10-24 11:45:29,200 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Flujo1EnviarOrdenesFabricacion
+2023-10-24 11:45:29,200 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7741507c
+2023-10-24 11:45:29,216 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Flujo1EnviarOrdenesFabricacion.stage1
+2023-10-24 11:45:29,231 [main] INFO  org.mule.component.ComponentLifecycleManager - Initialising component: component.349517956
+2023-10-24 11:45:29,513 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-10-24 11:45:29,638 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\smartfactorysesion7\smartfactorysesion7.xml'}]"
+2023-10-24 11:45:29,638 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\smartfactorysesion7\smartfactorysesion7.xml'}]"
+2023-10-24 11:45:29,638 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-10-24 11:45:29,638 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'smartfactorysesion7'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-10-24 11:45:29,654 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-10-24 11:45:29,654 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-10-24 11:45:29,669 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Connected: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=1764e45e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-10-24 11:45:29,669 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Starting: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=1764e45e
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-10-24 11:45:29,669 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.polling.mule.default
+2023-10-24 11:45:29,669 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-10-24 11:45:29,669 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Flujo1EnviarOrdenesFabricacion
+2023-10-24 11:45:29,669 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Flujo1EnviarOrdenesFabricacion.stage1
+2023-10-24 11:45:29,669 [main] INFO  org.mule.component.ComponentLifecycleManager - Starting component: component.349517956
+2023-10-24 11:45:29,797 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: Flujo1EnviarOrdenesFabricacion on endpointUri: polling://-1912630717
+2023-10-24 11:45:29,812 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 11:45:29,828 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://Flujo1EnviarOrdenesFabricacion/1755938753
+2023-10-24 11:45:29,828 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://Flujo1EnviarOrdenesFabricacion/1755938753
+2023-10-24 11:45:29,828 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-10-24 11:45:29,828 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 11:45:29,828 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-10-24 11:45:29,875 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-10-24 11:45:34,828 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.smartfactorysesion7:type=Endpoint,service="Flujo1EnviarOrdenesFabricacion",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 11:45:34,829 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.smartfactorysesion7:type=Endpoint,service="Flujo1EnviarOrdenesFabricacion",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 11:45:34,830 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.smartfactorysesion7:type=Connector,name="connector.polling.mule.default"
+2023-10-24 11:45:34,831 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: smartfactorysesion7                                   *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-10-24 11:45:35,363 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 11:45:39,882 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 11:45:44,878 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 12:51:39,015 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'smartfactorysesion7'                   +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-10-24 12:51:39,281 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-10-24 12:51:39,328 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-10-24 12:51:39,390 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-10-24 12:51:39,390 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-10-24 12:51:39,422 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2da5fdc: startup date [Tue Oct 24 12:51:39 CEST 2023]; root of context hierarchy
+2023-10-24 12:51:40,505 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-10-24 12:51:41,204 [main] WARN  org.springframework.beans.GenericTypeAwarePropertyDescriptor - Invalid JavaBean property 'port' being accessed! Ambiguous write methods found next to actually used [public void org.mule.endpoint.URIBuilder.setPort(java.lang.String)]: [public void org.mule.endpoint.URIBuilder.setPort(int)]
+2023-10-24 12:51:41,689 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-10-24 12:51:41,777 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-tx-log\tx2.log
+2023-10-24 12:51:41,792 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\smartfactorysesion7\queue-xa-tx-log\tx2.log
+2023-10-24 12:51:41,792 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.polling.mule.default
+2023-10-24 12:51:41,824 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.ftp.mule.default
+2023-10-24 12:51:41,917 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-10-24 12:51:41,917 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Flujo1EnviarOrdenesFabricacion
+2023-10-24 12:51:41,917 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1b53e6fc
+2023-10-24 12:51:41,933 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Flujo1EnviarOrdenesFabricacion.stage1
+2023-10-24 12:51:41,933 [main] INFO  org.mule.component.ComponentLifecycleManager - Initialising component: component.1576976929
+2023-10-24 12:51:41,949 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: smartfactorysesion7Flow
+2023-10-24 12:51:41,949 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1a05ff8e
+2023-10-24 12:51:41,949 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: smartfactorysesion7Flow.stage1
+2023-10-24 12:51:41,949 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: smartfactorysesion7Flow1
+2023-10-24 12:51:41,949 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4e1104f4
+2023-10-24 12:51:41,949 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: smartfactorysesion7Flow1.stage1
+2023-10-24 12:51:41,949 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: smartfactorysesion7Flow3
+2023-10-24 12:51:41,949 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5b86f4cb
+2023-10-24 12:51:41,964 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: smartfactorysesion7Flow3.stage1
+2023-10-24 12:51:41,964 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: smartfactorysesion7Flow2
+2023-10-24 12:51:41,964 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@347f8029
+2023-10-24 12:51:41,964 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: smartfactorysesion7Flow2.stage1
+2023-10-24 12:51:42,199 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-10-24 12:51:42,292 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\smartfactorysesion7\smartfactorysesion7.xml'}]"
+2023-10-24 12:51:42,292 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\smartfactorysesion7\smartfactorysesion7.xml'}]"
+2023-10-24 12:51:42,292 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-10-24 12:51:42,292 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'smartfactorysesion7'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-10-24 12:51:42,309 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-10-24 12:51:42,309 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-10-24 12:51:42,309 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Connected: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=5036a286
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-10-24 12:51:42,309 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Starting: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=5036a286
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-10-24 12:51:42,309 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.polling.mule.default
+2023-10-24 12:51:42,309 [main] INFO  com.mulesoft.mule.transport.ftp.EEFtpConnector - Connected: EEFtpConnector
+{
+  name=connector.ftp.mule.default
+  lifecycle=initialise
+  this=8b1bfdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[ftp]
+  serviceOverrides=<none>
+}
+
+2023-10-24 12:51:42,309 [main] INFO  com.mulesoft.mule.transport.ftp.EEFtpConnector - Starting: EEFtpConnector
+{
+  name=connector.ftp.mule.default
+  lifecycle=initialise
+  this=8b1bfdf
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[ftp]
+  serviceOverrides=<none>
+}
+
+2023-10-24 12:51:42,309 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.ftp.mule.default
+2023-10-24 12:51:42,325 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-10-24 12:51:42,325 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Flujo1EnviarOrdenesFabricacion
+2023-10-24 12:51:42,325 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Flujo1EnviarOrdenesFabricacion.stage1
+2023-10-24 12:51:42,325 [main] INFO  org.mule.component.ComponentLifecycleManager - Starting component: component.1576976929
+2023-10-24 12:51:42,340 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: smartfactorysesion7Flow
+2023-10-24 12:51:42,340 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: smartfactorysesion7Flow.stage1
+2023-10-24 12:51:42,340 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: smartfactorysesion7Flow1
+2023-10-24 12:51:42,340 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: smartfactorysesion7Flow1.stage1
+2023-10-24 12:51:42,340 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: smartfactorysesion7Flow3
+2023-10-24 12:51:42,340 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: smartfactorysesion7Flow3.stage1
+2023-10-24 12:51:42,340 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: smartfactorysesion7Flow2
+2023-10-24 12:51:42,340 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: smartfactorysesion7Flow2.stage1
+2023-10-24 12:51:42,466 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: Flujo1EnviarOrdenesFabricacion on endpointUri: polling://-1912630717
+2023-10-24 12:51:42,466 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://Flujo1EnviarOrdenesFabricacion/55220696
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://Flujo1EnviarOrdenesFabricacion/55220696
+2023-10-24 12:51:42,482 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: smartfactorysesion7Flow1 on endpointUri: polling://-1912630717
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://smartfactorysesion7Flow1/1640299572
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://smartfactorysesion7Flow1/1640299572
+2023-10-24 12:51:42,482 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-10-24 12:51:42,482 [main] INFO  com.mulesoft.mule.transport.ftp.EEFtpConnector - Registering listener: smartfactorysesion7Flow2 on endpointUri: ftp://localhost:21
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: EEFtpMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  com.mulesoft.mule.transport.ftp.EEFtpMessageReceiver - Connecting clusterizable message receiver
+2023-10-24 12:51:42,482 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: EEFtpMessageReceiver
+2023-10-24 12:51:42,482 [main] INFO  com.mulesoft.mule.transport.ftp.EEFtpMessageReceiver - Starting clusterizable message receiver
+2023-10-24 12:51:42,529 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-10-24 12:51:43,686 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@1803f18e
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:44,502 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@880997f
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:45,503 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@2b114bfa
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:45,548 [[smartfactorysesion7].connector.ftp.mule.default.receiver.01] ERROR org.mule.retry.notifiers.ConnectNotifier - Failed to connect/reconnect: ftp://localhost:21. Root Exception was: Connection refused: connect. Type: class java.net.ConnectException
+2023-10-24 12:51:45,548 [[smartfactorysesion7].connector.ftp.mule.default.receiver.01] ERROR org.mule.exception.DefaultSystemExceptionStrategy - 
+********************************************************************************
+Message               : Connection refused: connect (java.net.ConnectException)
+Element               : /connector.ftp.mule.default @ app:null:null
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.net.ConnectException: Connection refused: connect
+	at java.net.TwoStacksPlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:607)
+	at org.apache.commons.net.SocketClient.connect(SocketClient.java:188)
+	at org.apache.commons.net.SocketClient.connect(SocketClient.java:209)
+	at org.mule.transport.ftp.FtpConnectionFactory.makeObject(FtpConnectionFactory.java:46)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:1188)
+	at org.mule.transport.ftp.FtpConnector.getFtp(FtpConnector.java:190)
+	at org.mule.transport.ftp.FtpConnector.createFtpClient(FtpConnector.java:717)
+	at org.mule.transport.ftp.FtpMessageReceiver$1.doWork(FtpMessageReceiver.java:137)
+	at org.mule.retry.policies.AbstractPolicyTemplate.execute(AbstractPolicyTemplate.java:67)
+	at org.mule.transport.ftp.FtpMessageReceiver.listFiles(FtpMessageReceiver.java:156)
+	at org.mule.transport.ftp.FtpMessageReceiver.poll(FtpMessageReceiver.java:96)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at org.mule.transport.TrackingWorkManager$TrackeableWork.run(TrackingWorkManager.java:267)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:45,548 [[smartfactorysesion7].connector.ftp.mule.default.receiver.01] INFO  org.mule.exception.DefaultSystemExceptionStrategy - Exception caught is a ConnectException, attempting to reconnect...
+2023-10-24 12:51:45,548 [[smartfactorysesion7].connector.ftp.mule.default.receiver.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping connector: connector.ftp.mule.default
+2023-10-24 12:51:45,548 [[smartfactorysesion7].connector.ftp.mule.default.receiver.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping: 'null'. Object is: EEFtpMessageReceiver
+2023-10-24 12:51:46,502 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@6af82619
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:47,511 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.smartfactorysesion7:type=Endpoint,service="Flujo1EnviarOrdenesFabricacion",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 12:51:47,511 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.smartfactorysesion7:type=Endpoint,service="Flujo1EnviarOrdenesFabricacion",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 12:51:47,511 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.smartfactorysesion7:type=Endpoint,service="smartfactorysesion7Flow1",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 12:51:47,511 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.smartfactorysesion7:type=Endpoint,service="smartfactorysesion7Flow1",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-10-24 12:51:47,511 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.smartfactorysesion7:type=Endpoint,service="smartfactorysesion7Flow2",connector=connector.ftp.mule.default,name="endpoint.ftp.localhost.21"
+2023-10-24 12:51:47,512 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.smartfactorysesion7:type=Endpoint,service="smartfactorysesion7Flow2",connector=connector.ftp.mule.default,name="endpoint.ftp.localhost.21"
+2023-10-24 12:51:47,512 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.smartfactorysesion7:type=Connector,name="connector.polling.mule.default"
+2023-10-24 12:51:47,512 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.smartfactorysesion7:type=Connector,name="connector.ftp.mule.default"
+2023-10-24 12:51:47,513 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: smartfactorysesion7                                   *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-10-24 12:51:47,513 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@56d614d0
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:47,544 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 12:51:48,232 [[smartfactorysesion7].smartfactorysesion7Flow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+Payload               : {NullPayload}
+Payload Type          : org.mule.transport.NullPayload
+Element               : /smartfactorysesion7Flow/processors/1/0 @ smartfactorysesion7:smartfactorysesion7.xml:41 (Copy_of_OFSP/MAP a OFSP/XML)
+Element XML           : <dw:transform-message doc:name="Copy_of_OFSP/MAP a OFSP/XML" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
+                        <dw:input-payload mimeType="application/java"></dw:input-payload>
+                        <dw:set-payload>%dw 1.0
+%output application/xml
+---
+{
+	OrdenFabricacion @(id: payload.id): {
+		producto: payload.producto,
+		unidades: payload.uds
++ payload.uds,
+		longitud: payload.vel,
+		velocidad: payload.longitud
+	},
+	id: payload.id,
+	producto: payload.producto,
+	uds: payload.unidades,
+	longitud: payload.velocidad,
+	vel: payload.longitud
+}</dw:set-payload>
+                        </dw:transform-message>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+com.mulesoft.weave.mule.exception.WeaveExecutionException: Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+	at com.mulesoft.weave.mule.exception.WeaveExecutionException$.apply(WeaveExecutionException.scala:10)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.execute(WeaveMessageProcessor.scala:142)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.process(WeaveMessageProcessor.scala:78)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.processParts(AbstractMessageSequenceSplitter.java:177)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.process(AbstractMessageSequenceSplitter.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.routing.Foreach.doProcess(Foreach.java:132)
+	at org.mule.routing.Foreach.process(Foreach.java:104)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:48,498 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@693bf8b6
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:49,500 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@55adb2cc
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:50,499 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@7849fa8d
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:51,516 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@48bbedc7
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:52,492 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@3b6744c3
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:52,514 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 12:51:52,523 [[smartfactorysesion7].smartfactorysesion7Flow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+Payload               : {NullPayload}
+Payload Type          : org.mule.transport.NullPayload
+Element               : /smartfactorysesion7Flow/processors/1/0 @ smartfactorysesion7:smartfactorysesion7.xml:41 (Copy_of_OFSP/MAP a OFSP/XML)
+Element XML           : <dw:transform-message doc:name="Copy_of_OFSP/MAP a OFSP/XML" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
+                        <dw:input-payload mimeType="application/java"></dw:input-payload>
+                        <dw:set-payload>%dw 1.0
+%output application/xml
+---
+{
+	OrdenFabricacion @(id: payload.id): {
+		producto: payload.producto,
+		unidades: payload.uds
++ payload.uds,
+		longitud: payload.vel,
+		velocidad: payload.longitud
+	},
+	id: payload.id,
+	producto: payload.producto,
+	uds: payload.unidades,
+	longitud: payload.velocidad,
+	vel: payload.longitud
+}</dw:set-payload>
+                        </dw:transform-message>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+com.mulesoft.weave.mule.exception.WeaveExecutionException: Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+	at com.mulesoft.weave.mule.exception.WeaveExecutionException$.apply(WeaveExecutionException.scala:10)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.execute(WeaveMessageProcessor.scala:142)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.process(WeaveMessageProcessor.scala:78)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.processParts(AbstractMessageSequenceSplitter.java:177)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.process(AbstractMessageSequenceSplitter.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.routing.Foreach.doProcess(Foreach.java:132)
+	at org.mule.routing.Foreach.process(Foreach.java:104)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:53,499 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@3a0d55c5
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:54,500 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@339b49ad
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:55,499 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@54f00af4
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:56,499 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@5bf6c196
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:57,494 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@868c60
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:57,509 [[smartfactorysesion7].Flujo1EnviarOrdenesFabricacion.stage1.02] INFO  org.mule.component.simple.LogComponent - 
+********************************************************************************
+* Message received in service: Flujo1EnviarOrdenesFabricacion. Content is:     *
+* '5,3,300,40,205                                                              *
+* 
+6,4,400,50,203                                                              *
+* 
+'                                                                           *
+********************************************************************************
+2023-10-24 12:51:57,519 [[smartfactorysesion7].smartfactorysesion7Flow.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+Payload               : {NullPayload}
+Payload Type          : org.mule.transport.NullPayload
+Element               : /smartfactorysesion7Flow/processors/1/0 @ smartfactorysesion7:smartfactorysesion7.xml:41 (Copy_of_OFSP/MAP a OFSP/XML)
+Element XML           : <dw:transform-message doc:name="Copy_of_OFSP/MAP a OFSP/XML" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
+                        <dw:input-payload mimeType="application/java"></dw:input-payload>
+                        <dw:set-payload>%dw 1.0
+%output application/xml
+---
+{
+	OrdenFabricacion @(id: payload.id): {
+		producto: payload.producto,
+		unidades: payload.uds
++ payload.uds,
+		longitud: payload.vel,
+		velocidad: payload.longitud
+	},
+	id: payload.id,
+	producto: payload.producto,
+	uds: payload.unidades,
+	longitud: payload.velocidad,
+	vel: payload.longitud
+}</dw:set-payload>
+                        </dw:transform-message>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+com.mulesoft.weave.mule.exception.WeaveExecutionException: Exception while executing: 
+		unidades: payload.uds
+		          ^
+Type mismatch for '+' operator
+     found :null, :null
+  required :array, :any or
+  required :any, :array or
+  required :datetime, :period or
+  required :period, :datetime or
+  required :localdatetime, :period or
+  required :period, :localdatetime or
+  required :time, :period or
+  required :period, :time or
+  required :number, :number or
+  required :date, :period or
+  required :period, :date or
+  required :localtime, :period or
+  required :period, :localtime.
+	at com.mulesoft.weave.mule.exception.WeaveExecutionException$.apply(WeaveExecutionException.scala:10)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.execute(WeaveMessageProcessor.scala:142)
+	at com.mulesoft.weave.mule.WeaveMessageProcessor.process(WeaveMessageProcessor.scala:78)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.processParts(AbstractMessageSequenceSplitter.java:177)
+	at org.mule.routing.outbound.AbstractMessageSequenceSplitter.process(AbstractMessageSequenceSplitter.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.routing.Foreach.doProcess(Foreach.java:132)
+	at org.mule.routing.Foreach.process(Foreach.java:104)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:58,488 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@25369ebc
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-10-24 12:51:59,505 [pool-23-thread-1] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : Response code 404 mapped as failure.
+Payload               : org.glassfish.grizzly.utils.BufferInputStream@8971538
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+org.mule.module.http.internal.request.ResponseValidatorException: Response code 404 mapped as failure.
+	at org.mule.module.http.internal.request.SuccessStatusCodeValidator.validate(SuccessStatusCodeValidator.java:37)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.validateResponse(DefaultHttpRequester.java:466)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.innerProcess(DefaultHttpRequester.java:449)
+	at org.mule.module.http.internal.request.DefaultHttpRequester.processBlocking(DefaultHttpRequester.java:230)
+	at org.mule.processor.AbstractNonBlockingMessageProcessor.process(AbstractNonBlockingMessageProcessor.java:43)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:165)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver$1.process(MessageProcessorPollingMessageReceiver.java:149)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.pollWith(MessageProcessorPollingMessageReceiver.java:148)
+	at org.mule.transport.polling.MessageProcessorPollingMessageReceiver.poll(MessageProcessorPollingMessageReceiver.java:139)
+	at org.mule.transport.AbstractPollingMessageReceiver.performPoll(AbstractPollingMessageReceiver.java:216)
+	at org.mule.transport.PollingReceiverWorker.poll(PollingReceiverWorker.java:83)
+	at org.mule.transport.PollingReceiverWorker.run(PollingReceiverWorker.java:46)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+

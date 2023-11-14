@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:pop3s="http://www.mulesoft.org/schema/mule/pop3s" xmlns:email="http://www.mulesoft.org/schema/mule/email" xmlns:pop3="http://www.mulesoft.org/schema/mule/pop3" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/pop3 http://www.mulesoft.org/schema/mule/pop3/current/mule-pop3.xsd
+http://www.mulesoft.org/schema/mule/pop3s http://www.mulesoft.org/schema/mule/pop3s/current/mule-pop3s.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<pop3s:connector name="POP3" validateConnections="true" doc:name="POP3">
+		<pop3s:tls-client path="" storePassword=""/>
+		<pop3s:tls-trust-store path="" storePassword=""/>
+	</pop3s:connector>
+	<db:mysql-config name="MySQL_Configuration" doc:name="MySQL Configuration"/>
+	<db:mysql-config name="MySQL_Configuration1" host="localhost" port="3306" user="root" database="iap" doc:name="MySQL Configuration"/>
+	<http:request-config name="HTTP_Request_Configuration" host="pedvalar.webs.upv.es" port="80" doc:name="HTTP Request Configuration"/>
+	<flow name="ejercicio1Flow">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="10" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/iap/mail/getMail.php?mail=cabanero1111@gmail.com" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<expression-filter expression="#[payload.length()&gt;0]" doc:name="Expression"/>
+		<expression-transformer expression="#[org.mule.util.StringUtils.split(payload,&quot;,&quot;)]" doc:name="Expression"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<db:insert config-ref="MySQL_Configuration1" doc:name="Database">
+				<db:parameterized-query><![CDATA[INSERT INTO mensajes(texto) VALUES(#[payload[0]])]]></db:parameterized-query>
+			</db:insert>
+			<processor-chain>
+				<set-variable variableName="email" value="#[payload[1]]" doc:name="Variable"/>
+				<set-payload doc:name="Set Payload" value="#['He recibido tu mail']"/>
+				<smtp:outbound-endpoint host="localhost" responseTimeout="10000" doc:name="SMTP" from="iapetsinf@gmail.com" subject="Recibido" to="#[flowVars.email]"/>
+			</processor-chain>
+		</scatter-gather>
+	</flow>
+</mule>

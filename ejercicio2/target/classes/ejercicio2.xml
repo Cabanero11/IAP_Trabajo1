@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:ftp="http://www.mulesoft.org/schema/mule/ee/ftp" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/ftp http://www.mulesoft.org/schema/mule/ee/ftp/current/mule-ftp-ee.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+	<file:connector name="File" autoDelete="true" streaming="true" validateConnections="true" doc:name="File"/>
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="iap" doc:name="MySQL Configuration"/>
+	<db:mysql-config name="MySQL_Configuration1" host="localhost" port="3306" user="root" database="iap" doc:name="MySQL Configuration"/>
+	<flow name="FlowTxt">
+		<file:inbound-endpoint path="C:\tfgs" connector-ref="File" responseTimeout="10000" doc:name="File">
+			<file:filename-regex-filter pattern=".+\.csv" caseSensitive="true"/>
+		</file:inbound-endpoint>
+		<set-variable variableName="fileName" value="#[message.inboundProperties.originalFileName]" doc:name="Variable"/>
+		<file:file-to-string-transformer doc:name="File to String"/>
+		<expression-transformer expression="#[org.mule.util.StringUtils.split(payload, &quot;,&quot;)]" doc:name="Expression"/>
+		<set-variable variableName="email" value="#[payload[2]]" doc:name="Variable"/>
+		<db:insert config-ref="MySQL_Configuration" doc:name="Database">
+			<db:parameterized-query><![CDATA[INSERT INTO trabajos(dni, nombre, apellidos, email)
+VALUES(#[flowVars.fileName.
+substring(0,flowVars.fileName.length()-4).trim()],
+#[payload[0]],
+#[payload[1]],
+#[payload[2]]
+)]]></db:parameterized-query>
+		</db:insert>
+		<set-payload value="#['Trabajo dado de alta']" doc:name="Set Payload"/>
+		<smtp:outbound-endpoint host="smtp.upv.es" to="#[flowVars.email]" from="iapetsinf@gmail.com" subject="Alta de trabajo" responseTimeout="10000" doc:name="SMTP"/>
+	</flow>
+	<flow name="FlowPDF">
+		<file:inbound-endpoint path="C:\tfgs\" moveToDirectory="C:\tfgs\procesados" connector-ref="File" fileAge="2000" responseTimeout="10000" doc:name="File">
+			<file:filename-regex-filter pattern=".+\.pdf" caseSensitive="true"/>
+		</file:inbound-endpoint>
+		<set-variable variableName="fileName" value="#[message.inboundProperties.originalFileName]" doc:name="Variable"/>
+		<object-to-byte-array-transformer doc:name="Object to Byte Array"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<ftp:outbound-endpoint host="ftp.drivehq.com" port="21" path="/" user="iap_ftp2" password="iap_pass" passive="true" outputPattern="#[flowVars.fileName]" responseTimeout="10000" doc:name="FTP"/>
+			<processor-chain>
+				<set-variable variableName="dateStamp" value="#[function:dateStamp]" doc:name="Variable"/>
+				<db:update config-ref="MySQL_Configuration1" doc:name="Database">
+					<db:parameterized-query><![CDATA[UPDATE trabajos SET subido=1, fecha=#[flowVars.dateStamp]
+WHERE dni=#[flowVars.fileName.substring(0,flowVars.fileName.length()-4).trim()]]]></db:parameterized-query>
+				</db:update>
+			</processor-chain>
+		</scatter-gather>
+	</flow>
+</mule>

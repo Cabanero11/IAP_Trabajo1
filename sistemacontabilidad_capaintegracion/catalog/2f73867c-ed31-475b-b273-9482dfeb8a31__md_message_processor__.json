@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "D_AltaCliente_CSV"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "D_AltaCliente_MAP"
+        }
+    },
+    "id": "2f73867c-ed31-475b-b273-9482dfeb8a31",
+    "version": "5.2.0.0"
+}
