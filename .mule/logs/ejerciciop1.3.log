@@ -12356,3 +12356,586 @@ java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImp
 
 ********************************************************************************
 
+2023-11-14 18:25:11,432 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'ejercicioP13'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-11-14 18:25:11,856 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-11-14 18:25:11,918 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-11-14 18:25:11,981 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-11-14 18:25:11,981 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-11-14 18:25:12,019 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@76db9048: startup date [Tue Nov 14 18:25:12 CET 2023]; root of context hierarchy
+2023-11-14 18:25:13,329 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-11-14 18:25:14,333 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-11-14 18:25:14,444 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\ejercicioP13\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\ejercicioP13\queue-tx-log\tx2.log
+2023-11-14 18:25:14,459 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\ejercicioP13\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\ejercicioP13\queue-xa-tx-log\tx2.log
+2023-11-14 18:25:14,475 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: File
+2023-11-14 18:25:14,506 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.polling.mule.default
+2023-11-14 18:25:14,631 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-11-14 18:25:14,631 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Flujo1
+2023-11-14 18:25:14,631 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7dfca9e6
+2023-11-14 18:25:14,647 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Flujo1.stage1
+2023-11-14 18:25:14,663 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Flujo2
+2023-11-14 18:25:14,663 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@32b1e906
+2023-11-14 18:25:14,663 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Flujo2.stage1
+2023-11-14 18:25:14,975 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-11-14 18:25:15,084 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\ejercicioP13\ejercicioP13.xml'}]"
+2023-11-14 18:25:15,084 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\ejercicioP13\ejercicioP13.xml'}]"
+2023-11-14 18:25:15,084 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-11-14 18:25:15,084 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'ejercicioP13'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-11-14 18:25:15,101 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-11-14 18:25:15,101 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-11-14 18:25:15,116 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=File
+  lifecycle=initialise
+  this=28b68067
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2023-11-14 18:25:15,116 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=File
+  lifecycle=initialise
+  this=28b68067
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2023-11-14 18:25:15,116 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: File
+2023-11-14 18:25:15,116 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Connected: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=10508ba6
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-11-14 18:25:15,116 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Starting: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=10508ba6
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-11-14 18:25:15,116 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.polling.mule.default
+2023-11-14 18:25:15,116 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-11-14 18:25:15,116 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Flujo1
+2023-11-14 18:25:15,116 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Flujo1.stage1
+2023-11-14 18:25:15,116 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Flujo2
+2023-11-14 18:25:15,116 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Flujo2.stage1
+2023-11-14 18:25:15,303 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: Flujo1 on endpointUri: polling://-1912630717
+2023-11-14 18:25:15,303 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-14 18:25:15,319 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://Flujo1/289194317
+2023-11-14 18:25:15,319 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://Flujo1/289194317
+2023-11-14 18:25:15,319 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-11-14 18:25:15,319 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-14 18:25:15,319 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-11-14 18:25:15,319 [main] INFO  org.mule.transport.file.FileConnector - Registering listener: Flujo2 on endpointUri: file:///C:/Users/Antonio/Downloads/DESCARGAS/UNIVERSIDAD/IAP/PRACTICAS/ejercicio%20P1.3/descargasIAP/
+2023-11-14 18:25:15,334 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: FileMessageReceiver
+2023-11-14 18:25:15,349 [main] INFO  org.mule.transport.file.FileMessageReceiver - Connecting clusterizable message receiver
+2023-11-14 18:25:15,349 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: FileMessageReceiver
+2023-11-14 18:25:15,349 [main] INFO  org.mule.transport.file.FileMessageReceiver - Starting clusterizable message receiver
+2023-11-14 18:25:15,396 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.ejercicioP13:type=Endpoint,service="Flujo1",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.ejercicioP13:type=Endpoint,service="Flujo1",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.ejercicioP13:type=Endpoint,service="Flujo2",connector=File,name="endpoint..C.Users.Antonio.Downloads.DESCARGAS.UNIVERSIDAD.IAP.PRACTICAS.ejercicio P1.3.descargasIAP"
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.ejercicioP13:type=Endpoint,service="Flujo2",connector=File,name="endpoint..C.Users.Antonio.Downloads.DESCARGAS.UNIVERSIDAD.IAP.PRACTICAS.ejercicio P1.3.descargasIAP"
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.ejercicioP13:type=Connector,name="connector.polling.mule.default"
+2023-11-14 18:25:15,412 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.ejercicioP13:type=Connector,name="File"
+2023-11-14 18:25:15,427 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: ejercicioP13                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-11-14 18:25:16,580 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'File.dispatcher.62357254'. Object is: FileMessageDispatcher
+2023-11-14 18:25:16,580 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'File.dispatcher.62357254'. Object is: FileMessageDispatcher
+2023-11-14 18:25:16,596 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:17,348 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:17,363 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:17,395 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:18,350 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:18,375 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:18,375 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:19,346 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:19,378 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:19,382 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:20,351 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:20,382 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:20,387 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:21,353 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:21,386 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:21,391 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:22,359 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:22,390 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:22,396 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:23,349 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:23,396 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:23,399 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-14 18:25:24,352 [[ejercicioP13].File.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:24,399 [[ejercicioP13].File.receiver.01] INFO  org.mule.transport.file.FileMessageReceiver - Lock obtained on file: C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PRACTICAS\ejercicio P1.3\descargasIAP\movies.json
+2023-11-14 18:25:24,402 [[ejercicioP13].Flujo2.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document (java.lang.ClassCastException).
+Payload               : [{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.","director":"Frank Darabont","rating":"9.3","title":"The Shawshank Redemption"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.","director":"Francis Ford Coppola","rating":"9.2","title":"The Godfather"},{"characters":[{"actor":"Tim Robbins","name":"Andy Dufresne"},{"actor":"Morgan Freeman","name":"Ellis Boyd 'Red' Redding"},{"actor":"Marlon Brando","name":"Don Vito Corleone"},{"actor":"Al Pacino","name":"Michael Corleone"},{"actor":"James Caan","name":"Sonny Corleone"},{"actor":"Christian Bale","name":"Bruce Wayne"},{"actor":"Heath Ledger","name":"Joker"},{"actor":"Aaron Eckhart","name":"Harvey Dent"},{"actor":"Michael Caine","name":"Alfred"}],"plot":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.","director":"Christopher Nolan","rating":"9","title":"The Dark Knight"}]
+Payload Type          : java.lang.String
+Element               : /Flujo2/processors/1 @ ejercicioP13:ejercicioP13.xml:27 (Java)
+Element XML           : <custom-transformer class="transformadores.MoviesJSON2XML" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassCastException: com.sun.org.apache.xerces.internal.dom.DocumentImpl cannot be cast to org.dom4j.Document
+	at transformadores.MoviesJSON2XML.transformMessage(MoviesJSON2XML.java:20)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+

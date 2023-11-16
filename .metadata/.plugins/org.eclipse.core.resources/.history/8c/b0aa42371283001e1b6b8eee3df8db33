@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+	<http:request-config name="HTTP_Request_Configuration" host="http://personales.upv.es" port="80" doc:name="HTTP Request Configuration"/>
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="transiap" doc:name="MySQL Configuration"/>
+	<file:connector name="File" outputPattern="*" writeToDirectory="C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PROYECTO\prueba" autoDelete="false" streaming="true" validateConnections="true" doc:name="File"/>
+	<flow name="transiapFlow">
+		<poll doc:name="Poll">
+			<http:request config-ref="HTTP_Request_Configuration" path="/pedvalar/iap/TransIAP/SDC.csv" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<echo-component doc:name="Echo"/>
+		<custom-transformer class="transformadores.CSVtoMAP" doc:name="Java"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<db:select config-ref="MySQL_Configuration" doc:name="Database">
+				<db:parameterized-query><![CDATA[SELECT * FROM solicitud_descarga;]]></db:parameterized-query>
+			</db:select>
+			<file:outbound-endpoint path="C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PROYECTO\prueba" outputPattern="resultado.txt" connector-ref="File" responseTimeout="10000" doc:name="File"/>
+		</scatter-gather>
+	</flow>
+	<flow name="FlowTransladoContenedores">
+	</flow>
+	<flow name="FlowCosa">
+	</flow>
+</mule>

@@ -40,7 +40,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 		</dw:transform-message>
 		<foreach doc:name="For Each">
 			<dw:transform-message doc:name="Copy_of_OFSP/MAP a OFSP/XML" metadata:id="ec84333b-e19a-4f31-93b2-6e061df5900e">
-				<dw:input-payload mimeType="application/java"/>
+				<dw:input-payload mimeType="application/java" doc:sample="sample_data\OFSP-MAP.dwl"/>
 				<dw:set-payload><![CDATA[%dw 1.0
 %output application/xml
 ---

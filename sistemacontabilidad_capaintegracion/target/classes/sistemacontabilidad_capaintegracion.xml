@@ -34,8 +34,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<file:file-to-string-transformer doc:name="File to String"/>
 		<dw:transform-message doc:name="D_AltaCliente_CSV a D_AltaCliente_MAP" metadata:id="2f73867c-ed31-475b-b273-9482dfeb8a31">
 			<dw:input-payload mimeType="application/csv">
-				<dw:reader-property name="header" value="false"/>
-				<dw:reader-property name="separator" value=";"/>
 			</dw:input-payload>
 			<dw:set-payload><![CDATA[%dw 1.0
 %output application/java

@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "SolicitudDescargaXML"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "SolicitudDescargaMAP"
+        }
+    },
+    "id": "685f2757-95b0-48cd-8eb2-70eed30ce759",
+    "version": "5.2.0.0"
+}

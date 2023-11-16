@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "CSVtoOBJECT"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "Solicitud-MAP"
+        }
+    },
+    "id": "6fa2979a-706a-4d87-bc90-5eb5116cbb8f",
+    "version": "5.2.0.0"
+}

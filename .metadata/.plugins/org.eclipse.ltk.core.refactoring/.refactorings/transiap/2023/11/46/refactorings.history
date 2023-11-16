@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;transiap&apos;&#x0D;&#x0A;- Original project: &apos;transiap&apos;&#x0D;&#x0A;- Original element: &apos;transiap/src/main/app/transformadores&apos;" description="Delete element" element1="/src\/main\/app&lt;transformadores" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1699980106662" subPackages="false" version="1.0"/>
+</session>
