@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:db="http://www.mulesoft.org/schema/mule/db"
+	xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
+	<http:request-config name="HTTP_Request_Configuration" host="personales.upv.es" port="80" doc:name="HTTP Request Configuration"/>
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="stc" doc:name="MySQL Configuration"/>
+	<sub-flow name="IDC_XML">
+		<dw:transform-message doc:name="Transform Message" metadata:id="deb35cb0-a19e-4d88-9588-43cec21a4519">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	idd: payload.idd,
+	Puerto: payload.Puerto.id,
+	Contenedores: payload.Contenedores map ((contenedore , indexOfContenedore) -> {
+		id: contenedore.idc,
+		agencia: payload.AgenciaNaviera.id
+	})
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<dw:transform-message doc:name="Transform Message" metadata:id="0845a8b7-7805-4386-b5ee-95fd38e53a89">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://www.sntn.es/standards
+---
+{
+	ns0#SNTN_InformeDescargaContenedores @(idd: payload.idd): {
+		ns0#Puerto @(sntn_id: payload.Puerto): null,
+		ns0#Contenedores: {
+			(payload.Contenedores map ((contenedore , indexOfContenedore) -> {
+				ns0#Contenedor @(id: contenedore.id , agencia: contenedore.agencia): contenedore
+			}))
+		}
+	}
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<file:outbound-endpoint path="C:\transIAP\informes\" outputPattern="#[payload.@idd].xml" responseTimeout="10000" doc:name="File"/>
+	</sub-flow>
+	<sub-flow name="IDC_JSON">
+		<dw:transform-message doc:name="Transform Message" metadata:id="deb35cb0-a19e-4d88-9588-43cec21a4519">
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	idd: payload.idd,
+	Puerto: payload.Puerto.id,
+	Contenedores: payload.Contenedores map ((contenedore , indexOfContenedore) -> {
+		id: contenedore.idc,
+		agencia: payload.AgenciaNaviera.id
+	})
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<set-variable variableName="solicitud_id" value="#[&quot;IDC-&quot;.concat(payload.idd).concat(&quot;.json&quot;)]" encoding="US-ASCII" mimeType="text/plain" doc:name="Variable"/>
+		<json:object-to-json-transformer doc:name="Object to JSON"/>
+		<file:outbound-endpoint path="C:\transIAP\informes\" responseTimeout="10000" doc:name="File" outputPattern="IDC.json"/>
+	</sub-flow>
+	<flow name="XML_Poll">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="8" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/pedvalar/iap/TransIAP/SDC.xml" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="87ad6229-a82c-46e5-9845-44975a482891">
+			<dw:input-payload mimeType="application/xml"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%namespace ns0 http://www.sntn.es/standards
+---
+{
+	Contenedores: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.*ns0#Contenedor map ((contenedor , indexOfContenedor) -> {
+		dimensiones: contenedor.ns0#dimensiones,
+		tipo: contenedor.ns0#tipo,
+		peso: contenedor.ns0#peso,
+		Traslado: {
+			FechaMaxEntrega: contenedor.ns0#Traslado.ns0#FechaMaxEntrega,
+			Destino: {
+				codigoPostal: contenedor.ns0#Traslado.ns0#Destino.ns0#codigoPostal,
+				ciudad: contenedor.ns0#Traslado.ns0#Destino.ns0#ciudad,
+				direccion: contenedor.ns0#Traslado.ns0#Destino.ns0#direccion,
+				pais: contenedor.ns0#Traslado.ns0#Destino.ns0#pais
+			}
+		},
+		precinto: contenedor.ns0#precinto as :string,
+		idc: contenedor.@idc
+	}),
+	idd: payload.ns0#SNTN_SolicitudDescargaContenedores.@idd,
+	Puerto: {
+		id: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Puerto.@id,
+		nombre: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Puerto.ns0#nombre
+	},
+	AgenciaNaviera: {
+		id: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.@id,
+		nombre: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#nombre,
+		pais: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#pais
+	}
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<scatter-gather doc:name="Scatter-Gather">
+			<flow-ref name="MAP_a_BD" doc:name="Flow Reference"/>
+			<flow-ref name="IDC_JSON" doc:name="Flow Reference"/>
+			<flow-ref name="IDC_XML" doc:name="Flow Reference"/>
+		</scatter-gather>
+	</flow>
+	<flow name="JSON_Poll">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="8" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/pedvalar/iap/TransIAP/SDC.json" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="08a8565e-2261-4be5-97e2-4c052c8d2757">
+			<dw:input-payload mimeType="application/json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	Contenedores: payload.Contenedores map ((contenedore , indexOfContenedore) -> {
+		dimensiones: contenedore.dimensiones,
+		tipo: contenedore.tipo,
+		peso: contenedore.peso,
+		Traslado: {
+			FechaMaxEntrega: contenedore.Traslado.FechaMaxEntrega,
+			Destino: {
+				codigoPostal: contenedore.Traslado.Destino.codigoPostal,
+				ciudad: contenedore.Traslado.Destino.ciudad,
+				direccion: contenedore.Traslado.Destino.direccion,
+				pais: contenedore.Traslado.Destino.pais
+			}
+		},
+		precinto: contenedore.precinto,
+		idc: contenedore.idc
+	}),
+	idd: payload.idd,
+	Puerto: payload.Puerto,
+	AgenciaNaviera: payload.AgenciaNaviera
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<flow-ref name="MAP_a_BD" doc:name="Flow Reference"/>
+	</flow>
+	<flow name="CSV_a_JSON">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="8" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/pedvalar/iap/TransIAP/SDC.csv" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<custom-transformer class="transformadores.CSVtoJSON" doc:name="Java"/>
+		<dw:transform-message doc:name="Transform Message" metadata:id="08a8565e-2261-4be5-97e2-4c052c8d2757">
+			<dw:input-payload mimeType="application/json"/>
+			<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	Contenedores: payload.Contenedores map ((contenedore , indexOfContenedore) -> {
+		dimensiones: contenedore.dimensiones,
+		tipo: contenedore.tipo,
+		peso: contenedore.peso,
+		Traslado: {
+			FechaMaxEntrega: contenedore.Traslado.FechaMaxEntrega,
+			Destino: {
+				codigoPostal: contenedore.Traslado.Destino.codigoPostal,
+				ciudad: contenedore.Traslado.Destino.ciudad,
+				direccion: contenedore.Traslado.Destino.direccion,
+				pais: contenedore.Traslado.Destino.pais
+			}
+		},
+		precinto: contenedore.precinto,
+		idc: contenedore.idc
+	}),
+	idd: payload.idd,
+	Puerto: payload.Puerto,
+	AgenciaNaviera: payload.AgenciaNaviera
+}]]></dw:set-payload>
+		</dw:transform-message>
+		<flow-ref name="MAP_a_BD" doc:name="Flow Reference"/>
+	</flow>
+	<sub-flow name="MAP_a_BD">
+		<set-variable variableName="payload_checkpoint_1" value="#[payload]" doc:name="Variable"/>
+		<db:insert config-ref="MySQL_Configuration" doc:name="Database">
+			<db:parameterized-query><![CDATA[INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);]]></db:parameterized-query>
+		</db:insert>
+		<set-payload value="#[flowVars.payload_checkpoint_1]" doc:name="Set Payload"/>
+		<set-variable variableName="descarga_id" value="#[payload.idd.split(&quot;:&quot;)[2]]" doc:name="Variable"/>
+		<foreach collection="#[payload.Contenedores]" doc:name="For Each">
+			<set-variable variableName="payload_checkpoint" value="#[payload]" doc:name="Variable"/>
+			<db:insert config-ref="MySQL_Configuration" doc:name="Database">
+				<db:parameterized-query><![CDATA[INSERT INTO contenedor VALUES(#[payload.idc.split(":")[payload.idc.split(":").length - 1]], #[payload.tipo], #[payload.peso], #[payload.dimensiones], #[payload.precinto], #[flowVars.descarga_id]);]]></db:parameterized-query>
+			</db:insert>
+			<set-payload value="#[flowVars.payload_checkpoint]" doc:name="Set Payload"/>
+			<expression-filter expression="#[payload.Traslado.FechaMaxEntrega != null]" doc:name="Expression"/>
+			<set-variable variableName="contenedor_id" value="#[payload.idc.split(&quot;:&quot;)[payload.idc.split(&quot;:&quot;).length - 1]]" doc:name="Variable"/>
+			<set-payload value="#[payload.Traslado]" doc:name="Set Payload"/>
+			<set-variable variableName="new_id" value="#[java.util.UUID.randomUUID().toString()]" doc:name="Variable"/>
+			<set-variable variableName="fecha_entrega" value="#[payload.FechaMaxEntrega]" doc:name="Variable"/>
+			<db:insert config-ref="MySQL_Configuration" doc:name="Database">
+				<db:parameterized-query><![CDATA[INSERT INTO direccion VALUES(#[flowVars.'new_id'], #[payload.Destino.direccion], #[payload.Destino.codigoPostal], #[payload.Destino.ciudad], #[payload.Destino.pais]);]]></db:parameterized-query>
+			</db:insert>
+			<db:insert config-ref="MySQL_Configuration" doc:name="Database">
+				<db:parameterized-query><![CDATA[INSERT INTO traslado(idt, fechaEntrega, estado, destino, contenedor) VALUES(#[java.util.UUID.randomUUID().toString()], #[flowVars.fecha_entrega], "disponible", #[flowVars.'new_id'], #[flowVars.contenedor_id]);]]></db:parameterized-query>
+			</db:insert>
+		</foreach>
+	</sub-flow>
+</mule>

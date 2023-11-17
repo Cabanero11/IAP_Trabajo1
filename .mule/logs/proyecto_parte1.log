@@ -1,0 +1,799 @@
+2023-11-17 15:15:36,304 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'proyecto_parte1'                       +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-11-17 15:15:36,988 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-11-17 15:15:37,114 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-11-17 15:15:37,271 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-11-17 15:15:37,271 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-11-17 15:15:37,349 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2ecdf528: startup date [Fri Nov 17 15:15:37 CET 2023]; root of context hierarchy
+2023-11-17 15:15:39,451 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-11-17 15:15:41,758 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-11-17 15:15:41,940 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\proyecto_parte1\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\proyecto_parte1\queue-tx-log\tx2.log
+2023-11-17 15:15:41,963 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\proyecto_parte1\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\proyecto_parte1\queue-xa-tx-log\tx2.log
+2023-11-17 15:15:41,968 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.polling.mule.default
+2023-11-17 15:15:42,003 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising connector: connector.file.mule.default
+2023-11-17 15:15:42,214 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-11-17 15:15:42,218 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: XML_Poll
+2023-11-17 15:15:42,219 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@10230657
+2023-11-17 15:15:42,231 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: XML_Poll.stage1
+2023-11-17 15:15:42,471 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: JSON_Poll
+2023-11-17 15:15:42,471 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@493250cf
+2023-11-17 15:15:42,481 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: JSON_Poll.stage1
+2023-11-17 15:15:42,481 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: CSV_a_JSON
+2023-11-17 15:15:42,481 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2e015ac1
+2023-11-17 15:15:42,487 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: CSV_a_JSON.stage1
+2023-11-17 15:15:42,814 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-11-17 15:15:43,033 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\proyecto_parte1\proyecto_parte1.xml'}]"
+2023-11-17 15:15:43,033 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\proyecto_parte1\proyecto_parte1.xml'}]"
+2023-11-17 15:15:43,033 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-11-17 15:15:43,049 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'proyecto_parte1'                           +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-11-17 15:15:43,080 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-11-17 15:15:43,080 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-11-17 15:15:43,096 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Connected: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=40d04cf8
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-11-17 15:15:43,096 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Starting: MessageProcessorPollingConnector
+{
+  name=connector.polling.mule.default
+  lifecycle=initialise
+  this=40d04cf8
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[polling]
+  serviceOverrides=<none>
+}
+
+2023-11-17 15:15:43,096 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.polling.mule.default
+2023-11-17 15:15:43,096 [main] INFO  org.mule.transport.file.FileConnector - Connected: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=58fbfefb
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2023-11-17 15:15:43,096 [main] INFO  org.mule.transport.file.FileConnector - Starting: FileConnector
+{
+  name=connector.file.mule.default
+  lifecycle=initialise
+  this=58fbfefb
+  numberOfConcurrentTransactedReceivers=4
+  createMultipleTransactedReceivers=true
+  connected=true
+  supportedProtocols=[file]
+  serviceOverrides=<none>
+}
+
+2023-11-17 15:15:43,096 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting connector: connector.file.mule.default
+2023-11-17 15:15:43,112 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-11-17 15:15:43,112 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: XML_Poll
+2023-11-17 15:15:43,112 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: XML_Poll.stage1
+2023-11-17 15:15:43,112 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: JSON_Poll
+2023-11-17 15:15:43,112 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: JSON_Poll.stage1
+2023-11-17 15:15:43,112 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: CSV_a_JSON
+2023-11-17 15:15:43,112 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: CSV_a_JSON.stage1
+2023-11-17 15:15:43,335 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: XML_Poll on endpointUri: polling://-1912630717
+2023-11-17 15:15:43,351 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,366 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://XML_Poll/1446762148
+2023-11-17 15:15:43,366 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://XML_Poll/1446762148
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: JSON_Poll on endpointUri: polling://-1912630717
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://JSON_Poll/1528622589
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://JSON_Poll/1528622589
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingConnector - Registering listener: CSV_a_JSON on endpointUri: polling://-1912630717
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising Bean: polling://CSV_a_JSON/1664401624
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting Bean: polling://CSV_a_JSON/1664401624
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Connecting clusterizable message receiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'null'. Object is: MessageProcessorPollingMessageReceiver
+2023-11-17 15:15:43,382 [main] INFO  org.mule.transport.polling.MessageProcessorPollingMessageReceiver - Starting clusterizable message receiver
+2023-11-17 15:15:43,476 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-11-17 15:15:43,860 [[proyecto_parte1].CSV_a_JSON.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com/opencsv/CSVReader (java.lang.NoClassDefFoundError).
+Payload               : SNTN:SDC:345678901
+SNTN:PORT:ES46, Puerto de Valencia
+SNTN:AN:PackTrans, PackTrans, CN
+SNTN:DOCKER:b8114a04-9c2e-4aee-8d73-92e15c5d34cb, caja-movil, 800, 6789, std-20, 15/10/2023 11:00:00, "Camí de Vera, s/n", 46022, Valencia, ES
+SNTN:DOCKER:d85ccbc7-3bc1-49da-aa73-59d7f35f6cb0, carga-seca, 3000, 126734, HC-40, 16/10/2023 13:00:00, "Plaça de la Verge, 10", 46012, Valencia, ES
+cf2a8fc6-1e08-43bb-b78e-064c7edccf2e, ventilado, 550, 34633, std-40
+Payload Type          : java.lang.String
+Element               : /CSV_a_JSON/processors/1 @ proyecto_parte1:proyecto_parte1.xml:157 (Java)
+Element XML           : <custom-transformer class="transformadores.CSVtoJSON" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.ClassNotFoundException: com.opencsv.CSVReader
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387)
+	at org.mule.module.launcher.FineGrainedControlClassLoader.findClass(FineGrainedControlClassLoader.java:181)
+	at org.mule.module.launcher.MuleApplicationClassLoader.findClass(MuleApplicationClassLoader.java:138)
+	at org.mule.module.launcher.FineGrainedControlClassLoader.loadClass(FineGrainedControlClassLoader.java:117)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at transformadores.CSVtoJSON.transformMessage(CSVtoJSON.java:21)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:47,933 [[proyecto_parte1].JSON_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=cisterna, peso=1200, Traslado={FechaMaxEntrega=16/10/2023 10:00:00, Destino={codigoPostal=46011, ciudad=Valencia, direccion=Carrer Sant Pere, 59, pais=ES}}, precinto=56789123, idc=SNTN:DOCKER:b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1}, {dimensiones=std-40, tipo=imo-imdg, peso=700, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=1236789, idc=SNTN:DOCKER:9a53bb10-3eee-4cd6-a40a-8133c43f98da}], idd=SNTN:SDC:3456397, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:WorldPort, nombre=WorldPort, pais=ES}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:48,459 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.proyecto_parte1:type=Endpoint,service="XML_Poll",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,459 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.proyecto_parte1:type=Endpoint,service="XML_Poll",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,459 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.proyecto_parte1:type=Endpoint,service="CSV_a_JSON",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,463 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.proyecto_parte1:type=Endpoint,service="CSV_a_JSON",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,463 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Attempting to register service with name: Mule.proyecto_parte1:type=Endpoint,service="JSON_Poll",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,463 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Endpoint Service with name: Mule.proyecto_parte1:type=Endpoint,service="JSON_Poll",connector=connector.polling.mule.default,name="endpoint.polling.1912630717"
+2023-11-17 15:15:48,463 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.proyecto_parte1:type=Connector,name="connector.polling.mule.default"
+2023-11-17 15:15:48,463 [main] INFO  org.mule.module.management.agent.AbstractJmxAgent - Registered Connector Service with name Mule.proyecto_parte1:type=Connector,name="connector.file.mule.default"
+2023-11-17 15:15:48,468 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: proyecto_parte1                                       *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-11-17 15:15:51,412 [[proyecto_parte1].CSV_a_JSON.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com/opencsv/CSVReader (java.lang.NoClassDefFoundError).
+Payload               : SNTN:SDC:345678901
+SNTN:PORT:ES46, Puerto de Valencia
+SNTN:AN:PackTrans, PackTrans, CN
+SNTN:DOCKER:b8114a04-9c2e-4aee-8d73-92e15c5d34cb, caja-movil, 800, 6789, std-20, 15/10/2023 11:00:00, "Camí de Vera, s/n", 46022, Valencia, ES
+SNTN:DOCKER:d85ccbc7-3bc1-49da-aa73-59d7f35f6cb0, carga-seca, 3000, 126734, HC-40, 16/10/2023 13:00:00, "Plaça de la Verge, 10", 46012, Valencia, ES
+cf2a8fc6-1e08-43bb-b78e-064c7edccf2e, ventilado, 550, 34633, std-40
+Payload Type          : java.lang.String
+Element               : /CSV_a_JSON/processors/1 @ proyecto_parte1:proyecto_parte1.xml:157 (Java)
+Element XML           : <custom-transformer class="transformadores.CSVtoJSON" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.NoClassDefFoundError: com/opencsv/CSVReader
+	at transformadores.CSVtoJSON.transformMessage(CSVtoJSON.java:21)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:51,983 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.1358991944'. Object is: FileMessageDispatcher
+2023-11-17 15:15:51,997 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.1358991944'. Object is: FileMessageDispatcher
+2023-11-17 15:15:52,002 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\IDC.json
+2023-11-17 15:15:52,010 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising: 'connector.file.mule.default.dispatcher.14669528'. Object is: FileMessageDispatcher
+2023-11-17 15:15:52,010 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting: 'connector.file.mule.default.dispatcher.14669528'. Object is: FileMessageDispatcher
+2023-11-17 15:15:52,019 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\nullxml
+2023-11-17 15:15:53,455 [[proyecto_parte1].JSON_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=cisterna, peso=1200, Traslado={FechaMaxEntrega=16/10/2023 10:00:00, Destino={codigoPostal=46011, ciudad=Valencia, direccion=Carrer Sant Pere, 59, pais=ES}}, precinto=56789123, idc=SNTN:DOCKER:b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1}, {dimensiones=std-40, tipo=imo-imdg, peso=700, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=1236789, idc=SNTN:DOCKER:9a53bb10-3eee-4cd6-a40a-8133c43f98da}], idd=SNTN:SDC:3456397, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:WorldPort, nombre=WorldPort, pais=ES}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:55,489 [[proyecto_parte1].XML_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - Exception(s) were found for route(s): 
+Route 0:
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=refrigerado, peso=2200, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=456789, idc=SNTN:DOCKER:2d278207-6eeb-4527-8fb4-6da565ea61f5}, {dimensiones=std-40, tipo=frigorifico, peso=900, Traslado={FechaMaxEntrega=19/10/2023 06:00:00, Destino={codigoPostal=46021, ciudad=Valencia, direccion=Avinguda Cardenal Benlloch, 108, pais=ES}}, precinto=12389, idc=SNTN:DOCKER:270e9a08-a144-41ad-b4ad-7e84e8147809}, {dimensiones=std-20, tipo=cisterna, peso=470, Traslado={FechaMaxEntrega=29/10/2023 20:00:00, Destino={codigoPostal=46020, ciudad=Valencia, direccion=Avinguda Blasco Ibànyes, 11, pais=ES}}, precinto=38912, idc=SNTN:DOCKER:d706b7ab-4c0c-46c8-82b5-4080030c8293}], idd=SNTN:SDC:234567890, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:SeaTrans, nombre=PackTrans, pais=IE}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.work.ProcessingMuleEventWork.doRun(ProcessingMuleEventWork.java:62)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:59,420 [[proyecto_parte1].CSV_a_JSON.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com/opencsv/CSVReader (java.lang.NoClassDefFoundError).
+Payload               : SNTN:SDC:345678901
+SNTN:PORT:ES46, Puerto de Valencia
+SNTN:AN:PackTrans, PackTrans, CN
+SNTN:DOCKER:b8114a04-9c2e-4aee-8d73-92e15c5d34cb, caja-movil, 800, 6789, std-20, 15/10/2023 11:00:00, "Camí de Vera, s/n", 46022, Valencia, ES
+SNTN:DOCKER:d85ccbc7-3bc1-49da-aa73-59d7f35f6cb0, carga-seca, 3000, 126734, HC-40, 16/10/2023 13:00:00, "Plaça de la Verge, 10", 46012, Valencia, ES
+cf2a8fc6-1e08-43bb-b78e-064c7edccf2e, ventilado, 550, 34633, std-40
+Payload Type          : java.lang.String
+Element               : /CSV_a_JSON/processors/1 @ proyecto_parte1:proyecto_parte1.xml:157 (Java)
+Element XML           : <custom-transformer class="transformadores.CSVtoJSON" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.NoClassDefFoundError: com/opencsv/CSVReader
+	at transformadores.CSVtoJSON.transformMessage(CSVtoJSON.java:21)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:15:59,461 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\IDC.json
+2023-11-17 15:15:59,468 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\nullxml
+2023-11-17 15:16:01,457 [[proyecto_parte1].JSON_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=cisterna, peso=1200, Traslado={FechaMaxEntrega=16/10/2023 10:00:00, Destino={codigoPostal=46011, ciudad=Valencia, direccion=Carrer Sant Pere, 59, pais=ES}}, precinto=56789123, idc=SNTN:DOCKER:b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1}, {dimensiones=std-40, tipo=imo-imdg, peso=700, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=1236789, idc=SNTN:DOCKER:9a53bb10-3eee-4cd6-a40a-8133c43f98da}], idd=SNTN:SDC:3456397, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:WorldPort, nombre=WorldPort, pais=ES}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:16:03,488 [[proyecto_parte1].XML_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - Exception(s) were found for route(s): 
+Route 0:
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=refrigerado, peso=2200, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=456789, idc=SNTN:DOCKER:2d278207-6eeb-4527-8fb4-6da565ea61f5}, {dimensiones=std-40, tipo=frigorifico, peso=900, Traslado={FechaMaxEntrega=19/10/2023 06:00:00, Destino={codigoPostal=46021, ciudad=Valencia, direccion=Avinguda Cardenal Benlloch, 108, pais=ES}}, precinto=12389, idc=SNTN:DOCKER:270e9a08-a144-41ad-b4ad-7e84e8147809}, {dimensiones=std-20, tipo=cisterna, peso=470, Traslado={FechaMaxEntrega=29/10/2023 20:00:00, Destino={codigoPostal=46020, ciudad=Valencia, direccion=Avinguda Blasco Ibànyes, 11, pais=ES}}, precinto=38912, idc=SNTN:DOCKER:d706b7ab-4c0c-46c8-82b5-4080030c8293}], idd=SNTN:SDC:234567890, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:SeaTrans, nombre=PackTrans, pais=IE}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.work.ProcessingMuleEventWork.doRun(ProcessingMuleEventWork.java:62)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:16:07,416 [[proyecto_parte1].CSV_a_JSON.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : com/opencsv/CSVReader (java.lang.NoClassDefFoundError).
+Payload               : SNTN:SDC:345678901
+SNTN:PORT:ES46, Puerto de Valencia
+SNTN:AN:PackTrans, PackTrans, CN
+SNTN:DOCKER:b8114a04-9c2e-4aee-8d73-92e15c5d34cb, caja-movil, 800, 6789, std-20, 15/10/2023 11:00:00, "Camí de Vera, s/n", 46022, Valencia, ES
+SNTN:DOCKER:d85ccbc7-3bc1-49da-aa73-59d7f35f6cb0, carga-seca, 3000, 126734, HC-40, 16/10/2023 13:00:00, "Plaça de la Verge, 10", 46012, Valencia, ES
+cf2a8fc6-1e08-43bb-b78e-064c7edccf2e, ventilado, 550, 34633, std-40
+Payload Type          : java.lang.String
+Element               : /CSV_a_JSON/processors/1 @ proyecto_parte1:proyecto_parte1.xml:157 (Java)
+Element XML           : <custom-transformer class="transformadores.CSVtoJSON" doc:name="Java"></custom-transformer>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.lang.NoClassDefFoundError: com/opencsv/CSVReader
+	at transformadores.CSVtoJSON.transformMessage(CSVtoJSON.java:21)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:141)
+	at org.mule.transformer.AbstractMessageTransformer.transform(AbstractMessageTransformer.java:89)
+	at org.mule.DefaultMuleMessage.transformMessage(DefaultMuleMessage.java:1671)
+	at org.mule.DefaultMuleMessage.applyAllTransformers(DefaultMuleMessage.java:1574)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1548)
+	at org.mule.DefaultMuleMessage.applyTransformers(DefaultMuleMessage.java:1540)
+	at org.mule.transformer.AbstractTransformer.process(AbstractTransformer.java:117)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:16:07,432 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\IDC.json
+2023-11-17 15:16:07,448 [[proyecto_parte1].connector.file.mule.default.dispatcher.01] INFO  org.mule.transport.file.FileConnector - Writing file to: C:\transIAP\informes\nullxml
+2023-11-17 15:16:09,446 [[proyecto_parte1].JSON_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - 
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=cisterna, peso=1200, Traslado={FechaMaxEntrega=16/10/2023 10:00:00, Destino={codigoPostal=46011, ciudad=Valencia, direccion=Carrer Sant Pere, 59, pais=ES}}, precinto=56789123, idc=SNTN:DOCKER:b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1}, {dimensiones=std-40, tipo=imo-imdg, peso=700, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=1236789, idc=SNTN:DOCKER:9a53bb10-3eee-4cd6-a40a-8133c43f98da}], idd=SNTN:SDC:3456397, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:WorldPort, nombre=WorldPort, pais=ES}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:98)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.processBlocking(AbstractEnvelopeInterceptor.java:59)
+	at org.mule.processor.AbstractRequestResponseMessageProcessor.process(AbstractRequestResponseMessageProcessor.java:48)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.processNextTimed(AsyncInterceptingMessageProcessor.java:144)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:234)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker$1.process(AsyncInterceptingMessageProcessor.java:227)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:16)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:35)
+	at org.mule.execution.CommitTransactionInterceptor.execute(CommitTransactionInterceptor.java:22)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:30)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:14)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:67)
+	at org.mule.execution.ResolvePreviousTransactionInterceptor.execute(ResolvePreviousTransactionInterceptor.java:44)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:50)
+	at org.mule.execution.ValidateTransactionalStateInterceptor.execute(ValidateTransactionalStateInterceptor.java:40)
+	at org.mule.execution.IsolateCurrentTransactionInterceptor.execute(IsolateCurrentTransactionInterceptor.java:41)
+	at org.mule.execution.ExternalTransactionInterceptor.execute(ExternalTransactionInterceptor.java:48)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:28)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:13)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:110)
+	at org.mule.execution.TransactionalErrorHandlingExecutionTemplate.execute(TransactionalErrorHandlingExecutionTemplate.java:30)
+	at org.mule.processor.AsyncInterceptingMessageProcessor$AsyncMessageProcessorWorker.doRun(AsyncInterceptingMessageProcessor.java:226)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+
+2023-11-17 15:16:11,483 [[proyecto_parte1].XML_Poll.stage1.02] ERROR org.mule.exception.DefaultMessagingExceptionStrategy - Exception(s) were found for route(s): 
+Route 0:
+********************************************************************************
+Message               : org.mule.module.db.internal.domain.connection.ConnectionCreationException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server. (java.sql.SQLException)
+Payload               : {Contenedores=[{dimensiones=std-20, tipo=refrigerado, peso=2200, Traslado={FechaMaxEntrega=null, Destino={codigoPostal=null, ciudad=null, direccion=null, pais=null}}, precinto=456789, idc=SNTN:DOCKER:2d278207-6eeb-4527-8fb4-6da565ea61f5}, {dimensiones=std-40, tipo=frigorifico, peso=900, Traslado={FechaMaxEntrega=19/10/2023 06:00:00, Destino={codigoPostal=46021, ciudad=Valencia, direccion=Avinguda Cardenal Benlloch, 108, pais=ES}}, precinto=12389, idc=SNTN:DOCKER:270e9a08-a144-41ad-b4ad-7e84e8147809}, {dimensiones=std-20, tipo=cisterna, peso=470, Traslado={FechaMaxEntrega=29/10/2023 20:00:00, Destino={codigoPostal=46020, ciudad=Valencia, direccion=Avinguda Blasco Ibànyes, 11, pais=ES}}, precinto=38912, idc=SNTN:DOCKER:d706b7ab-4c0c-46c8-82b5-4080030c8293}], idd=SNTN:SDC:234567890, Puerto={id=SNTN:PORT:ES46, nombre=Puerto de Valencia}, AgenciaNaviera={id=SNTN:AN:SeaTrans, nombre=PackTrans, pais=IE}}
+Payload Type          : java.util.LinkedHashMap
+Element               : /MySQL_Configuration @ app:proyecto_parte1.xml:18 (MySQL Configuration)
+Element XML           : <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+                        <db:parameterized-query>INSERT INTO solicitud_descarga VALUES(#[payload.idd.split(":")[2]], NOW(), #[payload.AgenciaNaviera.id.split(":")[2]]);</db:parameterized-query>
+                        </db:insert>
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+java.sql.SQLException: Cannot get connection for URL jdbc:mysql://localhost:3306/stc : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:216)
+	at org.enhydra.jdbc.standard.StandardDataSource.getConnection(StandardDataSource.java:144)
+	at org.mule.module.db.internal.domain.connection.SimpleConnectionFactory.doCreateConnection(SimpleConnectionFactory.java:43)
+	at org.mule.module.db.internal.domain.connection.AbstractConnectionFactory.create(AbstractConnectionFactory.java:35)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createDataSourceConnection(TransactionalDbConnectionFactory.java:84)
+	at org.mule.module.db.internal.domain.connection.TransactionalDbConnectionFactory.createConnection(TransactionalDbConnectionFactory.java:53)
+	at org.mule.module.db.internal.processor.AbstractDbMessageProcessor.process(AbstractDbMessageProcessor.java:72)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.processor.BlockingProcessorExecutor.executeNext(BlockingProcessorExecutor.java:88)
+	at org.mule.processor.BlockingProcessorExecutor.execute(BlockingProcessorExecutor.java:59)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:112)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:44)
+	at org.mule.work.ProcessingMuleEventWork.doRun(ProcessingMuleEventWork.java:62)
+	at org.mule.work.AbstractMuleEventWork.run(AbstractMuleEventWork.java:53)
+	at org.mule.work.WorkerContext.run(WorkerContext.java:301)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+
+********************************************************************************
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
+	<http:request-config name="HTTP_Request_Configuration" host="personales.upv.es" port="80" doc:name="HTTP Request Configuration"/>
+	<db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="transiap" doc:name="MySQL Configuration"/>
+	<file:connector name="File" writeToDirectory="C:\transIAP" autoDelete="false" streaming="true" validateConnections="true" doc:name="File"/>
+	<file:connector name="XML" writeToDirectory="C:\informes\ITC" autoDelete="false" streaming="true" validateConnections="true" doc:name="File"/>
+	<flow name="RecibirSolicitudDeDescargaYSubirInformeXML_A_laBD">
+		<poll doc:name="Poll">
+			<fixed-frequency-scheduler frequency="5" timeUnit="SECONDS"/>
+			<http:request config-ref="HTTP_Request_Configuration" path="/pedvalar/iap/TransIAP/SDC.xml" method="GET" doc:name="HTTP"/>
+		</poll>
+		<object-to-string-transformer doc:name="Object to String"/>
+		<scatter-gather doc:name="Scatter-Gather">
+			<processor-chain>
+				<dw:transform-message doc:name="Transform Message" metadata:id="37cf2706-1226-43f4-b1f1-1b00c17e1896">
+					<dw:input-payload doc:sample="C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PROYECTO\Proyecto-Entregable1-ficheros\documentos-intercambio\SNTN_SolicitudDescargaContenedores.xml" mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%namespace ns0 http://www.sntn.es/standards
+---
+{
+	id: (payload.ns0#SNTN_SolicitudDescargaContenedores.@idd splitBy "SNTN:SDC:" joinBy "") as :number,
+	fecha: now as :string {format: "dd/MM/yyyy HH:mm:ss"},
+	naviera: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#nombre
+}
+]]></dw:set-payload>
+				</dw:transform-message>
+				<echo-component doc:name="Echo"/>
+				<collection-splitter doc:name="Collection Splitter"/>
+				<choice doc:name="Choice">
+					<when expression="#[payload.traslado==null]">
+						<db:update config-ref="MySQL_Configuration" doc:name="Database">
+							<db:parameterized-query><![CDATA[UPDATE `solicitud_descarga`
+SET `fecha` = #[payload.fecha], `naviera` = #[payload.naviera]
+WHERE `id` = #[payload.id];]]></db:parameterized-query>
+						</db:update>
+					</when>
+					<otherwise>
+						<db:update config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+							<db:parameterized-query><![CDATA[UPDATE `solicitud_descarga`
+SET `fecha` = #[payload.fecha], `naviera` = #[payload.naviera]
+WHERE `id` = #[payload.id];]]></db:parameterized-query>
+						</db:update>
+					</otherwise>
+				</choice>
+			</processor-chain>
+			<processor-chain>
+				<dw:transform-message doc:name="Transform Message" metadata:id="7b03d459-5953-489d-82c4-cffa9f4c2594">
+					<dw:input-payload mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+%namespace ns0 http://www.sntn.es/standards
+---
+{
+	ns0#SNTN_InformeDescargaContenedores @(idd: payload.ns0#SNTN_SolicitudDescargaContenedores.@idd ): null,
+	ns0#SNTN_InformeDescargaContenedores: {
+		ns0#Contenedores: {
+			([{
+				ns0#Contenedor @(agencia: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.@id): null
+			}] ++ (payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.*ns0#Contenedor map ((contenedor , indexOfContenedor) -> {
+				ns0#Contenedor @(id: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.@idc): {
+				}
+			})))
+		}
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+				<file:outbound-endpoint path="C:\informes\ITC" outputPattern="#[payload.idd].xml" connector-ref="XML" responseTimeout="10000" doc:name="Informe XML"/>
+			</processor-chain>
+		</scatter-gather>
+
+
+	</flow>
+
+</mule>

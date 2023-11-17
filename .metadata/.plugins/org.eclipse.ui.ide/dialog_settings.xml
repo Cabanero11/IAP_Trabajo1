@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PROYECTO"/>
+		<item value="C:\Users\Antonio\Downloads\DESCARGAS\UNIVERSIDAD\IAP\PROYECTO\Proyecto-Entregable1-ficheros"/>
+	</list>
 	<section name="NewWizardAction">
 	</section>
 </section>

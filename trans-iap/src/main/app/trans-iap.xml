@@ -33,16 +33,58 @@ http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/
 {
 	id: (payload.ns0#SNTN_SolicitudDescargaContenedores.@idd splitBy "SNTN:SDC:" joinBy "") as :number,
 	fecha: now as :string {format: "dd/MM/yyyy HH:mm:ss"},
-	naviera: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#nombre
+	naviera: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#nombre,
+	puertoId: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Puerto.@id splitBy "SNTN:PORT:" joinBy "",
+	puertoNombre: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#nombre,
+	agenciaNavieraId: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.@id,
+	agenciaNavieraPais: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#AgenciaNaviera.ns0#pais,
+	tipo: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#tipo,
+	peso: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#peso,
+	precinto: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#precinto as :string,
+	dimensiones: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#dimensiones,
+	direccion: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#Traslado.ns0#Destino.ns0#direccion,
+	codigoPostal: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#Traslado.ns0#Destino.ns0#codigoPostal,
+	ciudad: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#Traslado.ns0#Destino.ns0#ciudad,
+	pais: payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.ns0#Traslado.ns0#Destino.ns0#pais,
+	idc: (payload.ns0#SNTN_SolicitudDescargaContenedores.ns0#Contenedores.ns0#Contenedor.@idc splitBy "SNTN:DOCKER:" joinBy ""),
+	estado: "disponible"
 }
 ]]></dw:set-payload>
 				</dw:transform-message>
+				<set-variable variableName="payload_checkpoint1" value="#[payload]" doc:name="Variable"/>
+				<set-payload value="#[flowVars.payload_checkpoint1]" doc:name="Set Payload"/>
 				<echo-component doc:name="Echo"/>
-				<db:update config-ref="MySQL_Configuration" doc:name="Database">
+				<db:update config-ref="MySQL_Configuration" doc:name="Solicitud Descarga">
 					<db:parameterized-query><![CDATA[UPDATE `solicitud_descarga`
 SET `fecha` = #[payload.fecha], `naviera` = #[payload.naviera]
 WHERE `id` = #[payload.id];]]></db:parameterized-query>
 				</db:update>
+				<set-variable variableName="payload_checkpoint2" value="#[payload]" doc:name="Variable"/>
+				<set-payload value="#[flowVars.payload_checkpoint2]" doc:name="Set Payload"/>
+				<expression-filter expression="#[payload.fecha != null]" doc:name="Expression"/>
+				<db:insert config-ref="MySQL_Configuration" doc:name="Actualizar traslado">
+					<db:parameterized-query><![CDATA[INSERT INTO `traslado` (idt, fechaEntrega, estado, destino, contenedor, ultima_ubicacion) 
+VALUES (
+    #[java.util.UUID.randomUUID().toString()], 
+    #[payload.fecha], 
+    #[payload.estado],
+    #[payload.direccion],
+    #[payload.dimensiones],
+    NULL
+);]]></db:parameterized-query>
+				</db:insert>
+				<set-variable variableName="payload_checkpoint3" value="#[payload]" doc:name="Variable"/>
+				<set-payload value="#[flowVars.payload_checkpoint3]" doc:name="Set Payload"/>
+				<db:insert config-ref="MySQL_Configuration" doc:name="Actualizar contenedores">
+					<db:parameterized-query><![CDATA[INSERT INTO `direccion` (id, direccion, cp, ciudad, codigo_pais) 
+VALUES (
+    #[payload.id], 
+    #[payload.direccion], 
+    #[payload.codigoPostal], 
+    #[payload.ciudad],
+    #[payload.pais]
+);]]></db:parameterized-query>
+				</db:insert>
 			</processor-chain>
 			<processor-chain>
 				<dw:transform-message doc:name="Transform Message" metadata:id="7b03d459-5953-489d-82c4-cffa9f4c2594">
@@ -65,11 +107,10 @@ WHERE `id` = #[payload.id];]]></db:parameterized-query>
 	}
 }]]></dw:set-payload>
 				</dw:transform-message>
-				<file:outbound-endpoint path="C:\informes\ITC" outputPattern="#[payload.idd].xml" connector-ref="XML" responseTimeout="10000" doc:name="Informe XML"/>
+				<file:outbound-endpoint path="C:\informes\IDC" outputPattern="prueba.xml" connector-ref="XML" responseTimeout="10000" doc:name="Informe XML"/>
 			</processor-chain>
 		</scatter-gather>
-
-
 	</flow>
+
 
 </mule>
