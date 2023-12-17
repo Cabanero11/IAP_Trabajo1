@@ -1,0 +1,13 @@
+<contenedor>		
+	<idc>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1</idc>	
+	<tipo>cisterna</tipo>	
+	<dimension>std-20</dimension>	
+	<peso>1200</peso>
+	<precinto>56789123</precinto>	
+	<descarga>3456397</descarga>	
+	<traslado>
+        <idt>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1_TRAS</idt>
+        <fechaEntrega>16/10/2023 10:00:00</fechaEntrega>
+        <estado>entregado</estado>
+    </traslado>
+</contenedor>

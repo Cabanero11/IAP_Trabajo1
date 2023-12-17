@@ -1,0 +1,47 @@
+#%RAML 1.0
+
+title: Sample API
+baseUri: localhost:8081
+protocols:
+  - HTTP
+
+mediaType:
+  - application/json
+  - application/xml
+
+types:
+  Naviera:
+    type: object
+    properties:
+      id: string
+      nombre: string
+      pais: string
+     
+/navieras:
+  get:
+    queryParameters:
+      pais:
+        type: string
+        required: false
+    responses:
+      200: 
+        body:
+          type: Naviera[]
+  post:
+    body:
+        type: Naviera
+    responses:
+      200:
+        body:
+          type: string
+          
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            type: Naviera
+        404:
+          body:
+            type: string
+          

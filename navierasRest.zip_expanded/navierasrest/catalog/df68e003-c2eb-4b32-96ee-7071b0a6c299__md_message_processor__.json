@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "UnaNAvieraXML"
+        }
+    },
+    "id": "df68e003-c2eb-4b32-96ee-7071b0a6c299",
+    "version": "5.2.0.0"
+}

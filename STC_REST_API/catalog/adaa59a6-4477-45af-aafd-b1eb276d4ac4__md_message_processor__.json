@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "navieraMap"
+        }
+    },
+    "id": "adaa59a6-4477-45af-aafd-b1eb276d4ac4",
+    "version": "5.2.0.0"
+}

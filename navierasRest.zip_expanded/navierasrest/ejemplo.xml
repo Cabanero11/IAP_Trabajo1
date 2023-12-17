@@ -1,0 +1,12 @@
+<navieras>
+	<naviera>
+		<id>abc</id>
+		<nombre>abc</nombre>
+		<pais>es</pais>
+	</naviera>
+	<naviera>
+		<id>abc</id>
+		<nombre>abc</nombre>
+		<pais>es</pais>
+	</naviera>
+</navieras>

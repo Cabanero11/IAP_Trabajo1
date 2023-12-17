@@ -1,0 +1,12 @@
+<contenedores>
+	<contenedor>
+		<id>PackTrans</id>
+		<nombre>PackTrans</nombre>
+		<codigo_pais>CN</codigo_pais>
+	</contenedor>
+	<contenedor>
+		<id>SeaTrans</id>
+		<nombre>SeaTrans</nombre>
+		<codigo_pais>IE</codigo_pais>
+	</contenedor>
+</contenedores>

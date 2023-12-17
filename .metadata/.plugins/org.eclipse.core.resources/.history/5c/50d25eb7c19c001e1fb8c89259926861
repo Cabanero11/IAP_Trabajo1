@@ -1,0 +1,22 @@
+<trasladoTransporte>
+	<traslado>
+		<idt>270e9a08-a144-41ad-b4ad-7e84e8147809_TRAS</idt>	
+		<fechaEntrega>19/10/2023 06:00:00</fechaEntrega>	
+		<estado>disponible</estado>	
+		<destino>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1_DEST</destino>	
+		<contenedor>270e9a08-a144-41ad-b4ad-7e84e8147809</contenedor>	
+		<ultimaUbicacion>#[payload.ultima_ubicacion_traslado != null ? payload.ultima_ubicacion_traslado : '']</ultimaUbicacion>
+	</traslado>
+	<contenedor>
+		<tipo>cisterna</tipo>
+		<dimension>std-20</dimension>
+		<peso>1200</peso>
+	</contenedor>
+	<direccion>
+        <id>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1_DEST</id>
+        <direccion>Carrer Sant Pere, 59</direccion>
+        <cp>46011</cp>
+        <cuidad>Valencia</cuidad>
+        <codigo_pais>ES</codigo_pais>
+    </direccion>
+</trasladoTransporte>

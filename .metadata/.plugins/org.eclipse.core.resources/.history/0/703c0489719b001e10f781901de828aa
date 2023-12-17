@@ -1,0 +1,21 @@
+<traslados>
+	<traslado>
+		<idt>270e9a08-a144-41ad-b4ad-7e84e8147809_TRAS</idt>	
+		<fechaEntrega>19/10/2023 06:00:00</fechaEntrega>	
+		<estado>disponible</estado>	
+		<destino>270e9a08-a144-41ad-b4ad-7e84e8147809_DEST</destino>	
+		<contenedor>270e9a08-a144-41ad-b4ad-7e84e8147809</contenedor>	
+		<ciudad></ciudad>
+		<pais></pais>
+	</traslado>
+	<traslado>
+		<idt>43d4246b-bb8d-478f-8b40-4d6f99855a1b_TRAS</idt>	
+		<fechaEntrega>10/10/2023 13:42:00</fechaEntrega>	
+		<estado>disponible</estado>	
+		<destino>43d4246b-bb8d-478f-8b40-4d6f99855a1b_DEST</destino>	
+		<contenedor>43d4246b-bb8d-478f-8b40-4d6f99855a1b</contenedor>	
+		<ciudad>Valencia</ciudad>
+		<pais>ES</pais>
+	</traslado>
+	
+</traslados>

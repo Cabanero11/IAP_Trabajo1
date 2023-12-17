@@ -1,0 +1,16 @@
+{
+    "inputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "trasladoJSON"
+        }
+    },
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "trasladoMAP"
+        }
+    },
+    "id": "266f09d5-22ef-413b-a7db-c792b51ebd5d",
+    "version": "5.2.0.0"
+}

@@ -1,0 +1,13 @@
+<trasladoTransporte>
+	<tipo></tipo>
+	<dimension></dimension>
+	<peso></peso>
+	<direccion>
+        <id>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1_DEST</id>
+        <direccion>Carrer Sant Pere, 59</direccion>
+        <cp>46011</cp>
+        <cuidad>Valencia</cuidad>
+        <codigo_pais>ES</codigo_pais>
+    </direccion>
+    <fechaTope></fechaTope>
+</trasladoTransporte>

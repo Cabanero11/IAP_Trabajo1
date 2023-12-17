@@ -1,0 +1,516 @@
+2023-12-01 18:17:06,437 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'navierasrest'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:17:06,933 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-01 18:17:07,062 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-01 18:17:07,160 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-01 18:17:07,160 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-01 18:17:07,269 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@2ecdf528: startup date [Fri Dec 01 18:17:07 CET 2023]; root of context hierarchy
+2023-12-01 18:17:09,461 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-01 18:17:11,082 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-01 18:17:11,437 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx2.log
+2023-12-01 18:17:11,452 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx2.log
+2023-12-01 18:17:11,573 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-01 18:17:11,575 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-main
+2023-12-01 18:17:11,575 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@329efc61
+2023-12-01 18:17:11,592 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-main.stage1
+2023-12-01 18:17:11,604 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-console
+2023-12-01 18:17:11,604 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@37b1218
+2023-12-01 18:17:11,609 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-console.stage1
+2023-12-01 18:17:11,611 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras:navierasREST-config
+2023-12-01 18:17:11,611 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@304e1e4e
+2023-12-01 18:17:11,615 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:17:11,791 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:17:11,791 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@549404e7
+2023-12-01 18:17:11,794 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:17:11,795 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:17:11,795 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@19542115
+2023-12-01 18:17:11,798 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:17:11,798 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:17:11,798 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1e5e2e06
+2023-12-01 18:17:11,801 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:17:11,910 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2023-12-01 18:17:11,911 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: navierasREST-main
+2023-12-01 18:17:11,911 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: navierasREST-main.stage1
+2023-12-01 18:17:11,911 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: navierasREST-console
+2023-12-01 18:17:11,911 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: navierasREST-console.stage1
+2023-12-01 18:17:11,911 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/navieras:navierasREST-config
+2023-12-01 18:17:11,912 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:17:11,912 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:17:11,912 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:17:11,912 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:17:11,912 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:17:11,912 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:17:11,912 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:17:11,913 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2023-12-01 18:17:11,934 [main] WARN  org.mule.lifecycle.phases.DefaultLifecyclePhase - Failed to dispose object org.mule.modules.oauth2.provider.service.StoreCleaningService@34588991
+org.mule.api.lifecycle.LifecycleException: Failed to invoke lifecycle phase "dispose" on object: org.mule.modules.oauth2.provider.service.StoreCleaningService@34588991
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:243) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.phases.MuleContextDisposePhase.applyLifecycle(MuleContextDisposePhase.java:103) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringRegistryLifecycleManager$SpringContextDisposePhase.applyLifecycle(SpringRegistryLifecycleManager.java:143) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:108) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:78) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:134) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.dispose(AbstractRegistry.java:68) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:64) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryBrokerLifecycleManager.fireDisposePhase(RegistryBrokerLifecycleManager.java:82) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker.dispose(AbstractRegistryBroker.java:63) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.MuleRegistryHelper.fireLifecycle(MuleRegistryHelper.java:140) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:74) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:70) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager.fireLifecycle(MuleContextLifecycleManager.java:62) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.DefaultMuleContext.dispose(DefaultMuleContext.java:456) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:215) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:92) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+Caused by: java.lang.NullPointerException
+	at org.mule.modules.oauth2.provider.service.StoreCleaningService.dispose(StoreCleaningService.java:84) ~[mule-module-security-oauth2-provider-1.7.7.jar:?]
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_382]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_382]
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	... 36 more
+2023-12-01 18:17:12,087 [main] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@2ecdf528: startup date [Fri Dec 01 18:17:07 CET 2023]; root of context hierarchy
+2023-12-01 18:17:12,094 [main] ERROR org.mule.module.launcher.application.DefaultMuleApplication - null
+org.mule.module.apikit.exception.ApikitRuntimeException: Invalid API descriptor -- errors found: 1
+
+RAML resource not found --  file: navierasREST.raml
+
+	at org.mule.module.apikit.parser.ParserWrapperV1.validate(ParserWrapperV1.java:68) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at org.mule.module.apikit.ParserService.validateRaml(ParserService.java:86) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at org.mule.module.apikit.AbstractConfiguration.initialise(AbstractConfiguration.java:122) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_382]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_382]
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.phases.MuleContextInitialisePhase.applyLifecycle(MuleContextInitialisePhase.java:71) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:108) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:78) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:134) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.fireLifecycle(AbstractRegistry.java:150) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:116) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AutoConfigurationBuilder.autoConfigure(AutoConfigurationBuilder.java:102) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AutoConfigurationBuilder.doConfigure(AutoConfigurationBuilder.java:54) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:215) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:92) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+2023-12-01 18:17:12,096 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - App 'navierasrest' never started, nothing to dispose of
+2023-12-01 18:17:12,729 [main] WARN  org.mule.module.launcher.artifact.DefaultResourceReleaser - Unable to shutdown MySql's AbandonedConnectionCleanupThread
+java.lang.ClassNotFoundException: com.mysql.jdbc.AbandonedConnectionCleanupThread
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_382]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.findClass(FineGrainedControlClassLoader.java:181) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleApplicationClassLoader.findClass(MuleApplicationClassLoader.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.loadClass(FineGrainedControlClassLoader.java:117) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_382]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.shutdownMySqlAbandonedConnectionCleanupThread(DefaultResourceReleaser.java:200) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.doDeregisterDriver(DefaultResourceReleaser.java:133) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.deregisterJdbcDrivers(DefaultResourceReleaser.java:84) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.release(DefaultResourceReleaser.java:38) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.AbstractArtifactClassLoader.dispose(AbstractArtifactClassLoader.java:67) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.CompositeApplicationClassLoader.dispose(CompositeApplicationClassLoader.java:285) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.dispose(DefaultMuleApplication.java:336) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$1.execute(ArtifactWrapper.java:41) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.dispose(ArtifactWrapper.java:36) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:108) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+2023-12-01 18:17:58,298 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'navierasrest'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:17:58,744 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-01 18:17:58,802 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-01 18:17:58,890 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-01 18:17:58,890 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-01 18:17:58,930 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@33f349ae: startup date [Fri Dec 01 18:17:58 CET 2023]; root of context hierarchy
+2023-12-01 18:18:00,366 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-01 18:18:01,497 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-01 18:18:01,697 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx2.log
+2023-12-01 18:18:01,707 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx2.log
+2023-12-01 18:18:01,805 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-01 18:18:01,807 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-main
+2023-12-01 18:18:01,807 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4e481512
+2023-12-01 18:18:01,824 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-main.stage1
+2023-12-01 18:18:01,831 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-console
+2023-12-01 18:18:01,831 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@37d3e740
+2023-12-01 18:18:01,835 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-console.stage1
+2023-12-01 18:18:01,838 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras:navierasREST-config
+2023-12-01 18:18:01,838 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@606f0f70
+2023-12-01 18:18:01,842 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:18:01,980 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:18:01,980 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4a490518
+2023-12-01 18:18:01,984 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:18:01,984 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:18:01,985 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@367fbb28
+2023-12-01 18:18:01,988 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:18:01,988 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:18:01,988 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@ecb8b3e
+2023-12-01 18:18:01,991 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:18:02,461 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2023-12-01 18:18:02,462 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: navierasREST-main
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: navierasREST-main.stage1
+2023-12-01 18:18:02,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: navierasREST-console
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: navierasREST-console.stage1
+2023-12-01 18:18:02,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/navieras:navierasREST-config
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:18:02,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:18:02,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:18:02,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:18:02,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:18:02,464 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2023-12-01 18:18:02,488 [main] WARN  org.mule.lifecycle.phases.DefaultLifecyclePhase - Failed to dispose object org.mule.modules.oauth2.provider.service.StoreCleaningService@59ac94ad
+org.mule.api.lifecycle.LifecycleException: Failed to invoke lifecycle phase "dispose" on object: org.mule.modules.oauth2.provider.service.StoreCleaningService@59ac94ad
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:243) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.phases.MuleContextDisposePhase.applyLifecycle(MuleContextDisposePhase.java:103) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringRegistryLifecycleManager$SpringContextDisposePhase.applyLifecycle(SpringRegistryLifecycleManager.java:143) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:108) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:78) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:134) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.dispose(AbstractRegistry.java:68) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker$2.onTransition(AbstractRegistryBroker.java:64) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryBrokerLifecycleManager.fireDisposePhase(RegistryBrokerLifecycleManager.java:82) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistryBroker.dispose(AbstractRegistryBroker.java:63) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.MuleRegistryHelper.fireLifecycle(MuleRegistryHelper.java:140) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:74) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager$MuleContextLifecycleCallback.onTransition(MuleContextLifecycleManager.java:70) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.MuleContextLifecycleManager.fireLifecycle(MuleContextLifecycleManager.java:62) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.DefaultMuleContext.dispose(DefaultMuleContext.java:456) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:215) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:92) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+Caused by: java.lang.NullPointerException
+	at org.mule.modules.oauth2.provider.service.StoreCleaningService.dispose(StoreCleaningService.java:84) ~[mule-module-security-oauth2-provider-1.7.7.jar:?]
+	at sun.reflect.GeneratedMethodAccessor18.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_382]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_382]
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	... 36 more
+2023-12-01 18:18:02,604 [main] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@33f349ae: startup date [Fri Dec 01 18:17:58 CET 2023]; root of context hierarchy
+2023-12-01 18:18:02,610 [main] ERROR org.mule.module.launcher.application.DefaultMuleApplication - null
+org.mule.module.apikit.exception.ApikitRuntimeException: Invalid API descriptor -- errors found: 7
+
+Unexpected key 'text/plain'. Options are : "body" or "description" or "displayName" or "headers" or /\((.+)\)/ -- TransIAP.raml [line=73, col=11]
+Unexpected key 'text/plain'. Options are : "body" or "description" or "displayName" or "headers" or /\((.+)\)/ -- TransIAP.raml [line=91, col=11]
+Unexpected key 'text/plain'. Options are : "body" or "description" or "displayName" or "headers" or /\((.+)\)/ -- TransIAP.raml [line=106, col=11]
+Unexpected key 'text/plain'. Options are : "body" or "description" or "displayName" or "headers" or /\((.+)\)/ -- TransIAP.raml [line=124, col=11]
+Unexpected key '200'. Options are : "body" or "description" or "displayName" or "headers" or "is" or "protocols" or "queryParameters" or "queryString" or "responses" or "securedBy" or /\((.+)\)/ -- TransIAP.raml [line=134, col=7]
+Unexpected key '400'. Options are : "body" or "description" or "displayName" or "headers" or "is" or "protocols" or "queryParameters" or "queryString" or "responses" or "securedBy" or /\((.+)\)/ -- TransIAP.raml [line=139, col=7]
+Unexpected key '500'. Options are : "body" or "description" or "displayName" or "headers" or "is" or "protocols" or "queryParameters" or "queryString" or "responses" or "securedBy" or /\((.+)\)/ -- TransIAP.raml [line=144, col=7]
+
+	at org.mule.module.apikit.parser.ParserWrapperV2.validate(ParserWrapperV2.java:73) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at org.mule.module.apikit.ParserService.validateRaml(ParserService.java:86) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at org.mule.module.apikit.AbstractConfiguration.initialise(AbstractConfiguration.java:122) ~[mule-module-apikit-3.9.5-20220920.jar:?]
+	at sun.reflect.GeneratedMethodAccessor17.invoke(Unknown Source) ~[?:?]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_382]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_382]
+	at org.mule.lifecycle.phases.DefaultLifecyclePhase.applyLifecycle(DefaultLifecyclePhase.java:230) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.phases.MuleContextInitialisePhase.applyLifecycle(MuleContextInitialisePhase.java:71) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.doApplyLifecycle(RegistryLifecycleCallback.java:108) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleCallback.onTransition(RegistryLifecycleCallback.java:78) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.AbstractLifecycleManager.invokePhase(AbstractLifecycleManager.java:146) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.lifecycle.RegistryLifecycleManager.fireLifecycle(RegistryLifecycleManager.java:134) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.fireLifecycle(AbstractRegistry.java:150) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.registry.AbstractRegistry.initialise(AbstractRegistry.java:116) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.createSpringRegistry(SpringXmlConfigurationBuilder.java:177) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.spring.SpringXmlConfigurationBuilder.doConfigure(SpringXmlConfigurationBuilder.java:100) ~[mule-module-spring-config-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AutoConfigurationBuilder.autoConfigure(AutoConfigurationBuilder.java:102) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AutoConfigurationBuilder.doConfigure(AutoConfigurationBuilder.java:54) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractConfigurationBuilder.configure(AbstractConfigurationBuilder.java:43) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.config.builders.AbstractResourceConfigurationBuilder.configure(AbstractResourceConfigurationBuilder.java:69) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory$1.configure(DefaultMuleContextFactory.java:89) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.doCreateMuleContext(DefaultMuleContextFactory.java:222) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.context.DefaultMuleContextFactory.createMuleContext(DefaultMuleContextFactory.java:81) ~[mule-core-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.init(DefaultMuleApplication.java:215) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$2.execute(ArtifactWrapper.java:64) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.init(ArtifactWrapper.java:59) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:92) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+2023-12-01 18:18:02,613 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - App 'navierasrest' never started, nothing to dispose of
+2023-12-01 18:18:03,343 [main] WARN  org.mule.module.launcher.artifact.DefaultResourceReleaser - Unable to shutdown MySql's AbandonedConnectionCleanupThread
+java.lang.ClassNotFoundException: com.mysql.jdbc.AbandonedConnectionCleanupThread
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_382]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.findClass(FineGrainedControlClassLoader.java:181) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleApplicationClassLoader.findClass(MuleApplicationClassLoader.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.FineGrainedControlClassLoader.loadClass(FineGrainedControlClassLoader.java:117) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[?:1.8.0_382]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.shutdownMySqlAbandonedConnectionCleanupThread(DefaultResourceReleaser.java:200) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.doDeregisterDriver(DefaultResourceReleaser.java:133) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.deregisterJdbcDrivers(DefaultResourceReleaser.java:84) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.DefaultResourceReleaser.release(DefaultResourceReleaser.java:38) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.AbstractArtifactClassLoader.dispose(AbstractArtifactClassLoader.java:67) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.CompositeApplicationClassLoader.dispose(CompositeApplicationClassLoader.java:285) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.application.DefaultMuleApplication.dispose(DefaultMuleApplication.java:336) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper$1.execute(ArtifactWrapper.java:41) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.executeWithinArtifactClassLoader(ArtifactWrapper.java:138) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.artifact.ArtifactWrapper.dispose(ArtifactWrapper.java:36) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArtifactDeployer.deploy(DefaultArtifactDeployer.java:108) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:578) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployArtifact(DefaultArchiveDeployer.java:356) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:203) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:300) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:87) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DefaultArchiveDeployer.deployPackagedArtifact(DefaultArchiveDeployer.java:618) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.deployPackedApps(DeploymentDirectoryWatcher.java:302) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.DeploymentDirectoryWatcher.start(DeploymentDirectoryWatcher.java:156) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleDeploymentService.start(MuleDeploymentService.java:137) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.module.launcher.MuleContainer.start(MuleContainer.java:172) ~[mule-module-launcher-3.9.5-20220920.jar:3.9.5-20220920]
+	at org.mule.tooling.server.application.ApplicationDeployer.main(ApplicationDeployer.java:15) ~[tooling-support-3.9.5.jar:?]
+2023-12-01 18:30:19,359 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'navierasrest'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:30:19,823 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-01 18:30:19,879 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-01 18:30:19,937 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-01 18:30:19,937 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-01 18:30:19,979 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@7d4d65f5: startup date [Fri Dec 01 18:30:19 CET 2023]; root of context hierarchy
+2023-12-01 18:30:21,541 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-01 18:30:22,701 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-01 18:30:22,930 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx2.log
+2023-12-01 18:30:22,941 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx2.log
+2023-12-01 18:30:23,033 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-01 18:30:23,036 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-main
+2023-12-01 18:30:23,036 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5ca3acad
+2023-12-01 18:30:23,051 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-main.stage1
+2023-12-01 18:30:23,058 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-console
+2023-12-01 18:30:23,058 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@56351c02
+2023-12-01 18:30:23,062 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-console.stage1
+2023-12-01 18:30:23,064 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras:navierasREST-config
+2023-12-01 18:30:23,064 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@52ba21e4
+2023-12-01 18:30:23,068 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:30:23,203 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:30:23,203 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@14980819
+2023-12-01 18:30:23,207 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:30:23,207 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:30:23,208 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@477e5b69
+2023-12-01 18:30:23,210 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:30:23,211 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:30:23,211 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5bed0ff4
+2023-12-01 18:30:23,214 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:30:24,118 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/soicitud/{id} 
+2023-12-01 18:30:24,136 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/soicitud:application/xml 
+2023-12-01 18:30:24,136 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/soicitud:application/json 
+2023-12-01 18:30:24,136 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> delete:/soicitud 
+2023-12-01 18:30:24,138 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/soicitud:application/xml 
+2023-12-01 18:30:24,138 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/soicitud:application/json 
+2023-12-01 18:30:24,139 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/xml 
+2023-12-01 18:30:24,139 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/json 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/xml 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/json 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedor/{id} 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados/{id} 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedores/{id} 
+2023-12-01 18:30:24,142 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitudes/{id} 
+2023-12-01 18:30:24,160 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2023-12-01 18:30:24,220 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\navierasrest\navierasrest.xml'}]"
+2023-12-01 18:30:24,221 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\navierasrest\navierasrest.xml'}]"
+2023-12-01 18:30:24,225 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-12-01 18:30:24,229 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'navierasrest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:30:24,251 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-12-01 18:30:24,251 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-12-01 18:30:24,291 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2023-12-01 18:30:24,296 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-12-01 18:30:24,297 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: navierasREST-main
+2023-12-01 18:30:24,298 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: navierasREST-main.stage1
+2023-12-01 18:30:24,306 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2023-12-01 18:30:24,306 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: navierasREST-console
+2023-12-01 18:30:24,306 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: navierasREST-console.stage1
+2023-12-01 18:30:24,570 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/navieras:navierasREST-config
+2023-12-01 18:30:24,570 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:30:24,573 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:30:24,573 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:30:24,576 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:30:24,576 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:30:24,579 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:30:24,579 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:30:24,731 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-12-01 18:30:24,753 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: navierasrest                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-12-01 18:32:54,858 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'navierasrest'                          +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:32:55,290 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-01 18:32:55,346 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-01 18:32:55,408 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-01 18:32:55,408 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-01 18:32:55,466 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@7d4d65f5: startup date [Fri Dec 01 18:32:55 CET 2023]; root of context hierarchy
+2023-12-01 18:32:56,830 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-01 18:32:57,875 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-01 18:32:58,065 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-tx-log\tx2.log
+2023-12-01 18:32:58,074 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\navierasrest\queue-xa-tx-log\tx2.log
+2023-12-01 18:32:58,154 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-01 18:32:58,156 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-main
+2023-12-01 18:32:58,156 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5ca3acad
+2023-12-01 18:32:58,170 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-main.stage1
+2023-12-01 18:32:58,176 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: navierasREST-console
+2023-12-01 18:32:58,176 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@56351c02
+2023-12-01 18:32:58,179 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: navierasREST-console.stage1
+2023-12-01 18:32:58,182 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras:navierasREST-config
+2023-12-01 18:32:58,182 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@52ba21e4
+2023-12-01 18:32:58,186 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:32:58,313 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:32:58,313 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@14980819
+2023-12-01 18:32:58,317 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:32:58,317 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:32:58,317 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@477e5b69
+2023-12-01 18:32:58,320 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:32:58,321 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:32:58,321 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5bed0ff4
+2023-12-01 18:32:58,324 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:32:59,161 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/xml 
+2023-12-01 18:32:59,161 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/json 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/xml 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/json 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitud/{id} 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedor/{id} 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados 
+2023-12-01 18:32:59,164 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados/{id} 
+2023-12-01 18:32:59,165 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedores/{id} 
+2023-12-01 18:32:59,167 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/xml 
+2023-12-01 18:32:59,168 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/json 
+2023-12-01 18:32:59,168 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> delete:/solicitud 
+2023-12-01 18:32:59,169 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/solicitud:application/xml 
+2023-12-01 18:32:59,169 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/solicitud:application/json 
+2023-12-01 18:32:59,169 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitudes/{id} 
+2023-12-01 18:32:59,187 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2023-12-01 18:32:59,238 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\navierasrest\navierasrest.xml'}]"
+2023-12-01 18:32:59,238 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\navierasrest\navierasrest.xml'}]"
+2023-12-01 18:32:59,242 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-12-01 18:32:59,248 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'navierasrest'                              +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-01 18:32:59,263 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-12-01 18:32:59,263 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-12-01 18:32:59,303 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://0.0.0.0:8081
+2023-12-01 18:32:59,308 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-12-01 18:32:59,309 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: navierasREST-main
+2023-12-01 18:32:59,310 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: navierasREST-main.stage1
+2023-12-01 18:32:59,319 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://127.0.0.1:8081/console                            *
+********************************************************************************
+2023-12-01 18:32:59,319 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: navierasREST-console
+2023-12-01 18:32:59,319 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: navierasREST-console.stage1
+2023-12-01 18:32:59,513 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/navieras:navierasREST-config
+2023-12-01 18:32:59,513 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/navieras:navierasREST-config.stage1
+2023-12-01 18:32:59,515 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get:/navieras/{id}:navierasREST-config
+2023-12-01 18:32:59,515 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get:/navieras/{id}:navierasREST-config.stage1
+2023-12-01 18:32:59,518 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/navieras:application/json:navierasREST-config
+2023-12-01 18:32:59,518 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/navieras:application/json:navierasREST-config.stage1
+2023-12-01 18:32:59,521 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post:/navieras:application/xml:navierasREST-config
+2023-12-01 18:32:59,521 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post:/navieras:application/xml:navierasREST-config.stage1
+2023-12-01 18:32:59,628 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-12-01 18:32:59,651 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: navierasrest                                          *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************

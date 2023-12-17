@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TransIAP.raml&apos; to &apos;localizacionesrest/src/main/api&apos;&#x0D;&#x0A;- Original project: &apos;navierasrest&apos;&#x0D;&#x0A;- Destination element: &apos;localizacionesrest/src/main/api&apos;&#x0D;&#x0A;- Original element: &apos;TransIAP.raml&apos;" description="Copy file" destination="=localizacionesrest/src\/main\/api" element1="src/main/api/TransIAP.raml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1701451123065" units="0" version="1.0"/>
+</session>

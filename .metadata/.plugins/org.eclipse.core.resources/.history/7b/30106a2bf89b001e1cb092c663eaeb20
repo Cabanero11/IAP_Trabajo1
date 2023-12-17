@@ -1,0 +1,13 @@
+<contenedor>		
+	<idc>b49ac28d-4a8e-4cae-b5c4-fce9f8e27fd1</idc>	
+	<tipo>cisterna</tipo>	
+	<dimension>std-20</dimension>	
+	<peso>1200</peso>
+	<precinto>56789123</precinto>	
+	<descarga>3456397</descarga>	
+	<traslado>
+        <id_traslado>ID_DEL_TRASLADO</id_traslado>
+        <fechaEntrega>FECHA_ENTREGA_DEL_TRASLADO</fechaEntrega>
+        <estado_traslado>ESTADO_DEL_TRASLADO</estado_traslado>
+    </traslado>
+</contenedor>

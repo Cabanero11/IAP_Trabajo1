@@ -1,0 +1,19 @@
+<contenedores>
+	<contenedor>
+		<idc>9a53bb10-3eee-4cd6-a40a-8133c43f98da</idc>
+		<tipo>imo-imdg</tipo>
+		<peso>700</peso>
+		<dimension>std-40</dimension>
+		<precinto>1236789</precinto>
+		<descarga>3456397</descarga>
+	</contenedor>
+	<contenedor>
+		<idc>a478320-dbb1-463a-9bf1-6e05d6825511</idc>
+		<tipo>refrigerado</tipo>
+		<peso>1000</peso>
+		<dimension>std-20</dimension>
+		<precinto>123456789</precinto>
+		<descarga>123456789</descarga>
+	</contenedor>
+	
+</contenedores>

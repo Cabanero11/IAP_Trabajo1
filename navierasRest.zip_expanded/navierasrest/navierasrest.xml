@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
+    <http:listener-config name="navierasREST-httpListenerConfig" host="0.0.0.0" port="8081" doc:name="HTTP Listener Configuration" />
+    <apikit:config name="navierasREST-config" raml="navierasREST.raml" consoleEnabled="false" doc:name="Router" keepRamlBaseUri="false"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="stc" doc:name="MySQL Configuration" />
+    <flow name="navierasREST-main">
+        <http:listener config-ref="navierasREST-httpListenerConfig" path="/*" doc:name="HTTP" />
+        <apikit:router config-ref="navierasREST-config" doc:name="APIkit Router" />
+        <exception-strategy ref="navierasREST-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy" />
+    </flow>
+    <flow name="navierasREST-console">
+        <http:listener config-ref="navierasREST-httpListenerConfig" path="/console/*" doc:name="HTTP" />
+        <apikit:console config-ref="navierasREST-config" doc:name="APIkit Console" />
+    </flow>
+    <flow name="get:/navieras:navierasREST-config">
+        <set-variable variableName="representacion" value="#[message.inboundProperties.accept]" doc:name="var:representacion" />
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from compañia_naviera]]></db:parameterized-query>
+        </db:select>
+        <choice doc:name="Choice">
+            <when expression="#[flowVars.representacion!=null &amp;&amp; flowVars.representacion=='application/xml']">
+                <dw:transform-message metadata:id="c148e17d-8235-481f-b618-980309222ad3" doc:name="Transform Message">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	navieras: {
+		(payload map ((payload01 , indexOfPayload01) -> {
+			naviera: {
+				id: payload01.id,
+				nombre: payload01.nombre,
+				pais: payload01.codigo_pais
+			}
+		}))
+	}
+}]]></dw:set-payload>
+                </dw:transform-message>
+            </when>
+            <otherwise>
+                <json:object-to-json-transformer doc:name="Object to JSON" />
+            </otherwise>
+        </choice>
+    </flow>
+    <flow name="get:/navieras/{id}:navierasREST-config">
+        <set-variable variableName="representacion" value="#[message.inboundProperties.accept]" doc:name="var:representacion" />
+        <db:select config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[select * from compañia_naviera where id=#[flowVars.id]]]></db:parameterized-query>
+        </db:select>
+        <collection-splitter doc:name="Collection Splitter" />
+        <choice doc:name="Choice">
+            <when expression="#[flowVars.representacion!=null &amp;&amp; flowVars.representacion=='application/xml']">
+                <dw:transform-message metadata:id="df68e003-c2eb-4b32-96ee-7071b0a6c299" doc:name="Transform Message">
+                    <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	naviera: {
+		id: payload.id,
+		nombre: payload.nombre,
+		pais: payload.codigo_pais
+	}
+}]]></dw:set-payload>
+                </dw:transform-message>
+            </when>
+            <otherwise>
+                <json:object-to-json-transformer doc:name="Object to JSON" />
+            </otherwise>
+        </choice>
+    </flow>
+    <flow name="post:/navieras:application/json:navierasREST-config">
+        <dw:transform-message metadata:id="adaa59a6-4477-45af-aafd-b1eb276d4ac4" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="bd" doc:name="bd"/>
+    </flow>
+    <flow name="post:/navieras:application/xml:navierasREST-config">
+        <dw:transform-message metadata:id="ce9deb01-61f1-43f6-a15c-50415467166e" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+%namespace ns0 http://validationnamespace.raml.org
+---
+{
+	id: payload.Naviera.id,
+	nombre: payload.Naviera.nombre,
+	pais: payload.Naviera.pais
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <flow-ref name="bd" doc:name="bd"/>
+    </flow>
+    <sub-flow name="bd">
+        <db:insert config-ref="MySQL_Configuration" doc:name="Database">
+            <db:parameterized-query><![CDATA[insert into compañia_naviera(id, nombre,codigo_pais) values(#[payload.id],#[payload.nombre],#[payload.pais])]]></db:parameterized-query>
+        </db:insert>
+    </sub-flow>
+    <apikit:mapping-exception-strategy name="navierasREST-apiKitGlobalExceptionMapping">
+        <apikit:mapping statusCode="404">
+            <apikit:exception value="org.mule.module.apikit.exception.NotFoundException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Resource not found&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="405">
+            <apikit:exception value="org.mule.module.apikit.exception.MethodNotAllowedException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Method not allowed&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="415">
+            <apikit:exception value="org.mule.module.apikit.exception.UnsupportedMediaTypeException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Unsupported media type&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="406">
+            <apikit:exception value="org.mule.module.apikit.exception.NotAcceptableException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Not acceptable&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+        <apikit:mapping statusCode="400">
+            <apikit:exception value="org.mule.module.apikit.exception.BadRequestException" />
+            <set-property propertyName="Content-Type" value="application/json" doc:name="Property" />
+            <set-payload value="{ &quot;message&quot;: &quot;Bad request&quot; }" doc:name="Set Payload" />
+        </apikit:mapping>
+    </apikit:mapping-exception-strategy>
+</mule>

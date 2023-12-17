@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "navierasXML"
+        }
+    },
+    "id": "c148e17d-8235-481f-b618-980309222ad3",
+    "version": "5.2.0.0"
+}
