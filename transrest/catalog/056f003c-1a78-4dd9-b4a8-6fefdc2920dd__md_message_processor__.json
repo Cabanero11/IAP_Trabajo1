@@ -1,0 +1,11 @@
+{
+    "inputMessageMetadata": {},
+    "outputMessageMetadata": {
+        "messagePayload": {
+            "connectorName": "#_custom_mule_metadata_type_#",
+            "typeId": "postUbicacionJSON"
+        }
+    },
+    "id": "056f003c-1a78-4dd9-b4a8-6fefdc2920dd",
+    "version": "5.2.0.0"
+}

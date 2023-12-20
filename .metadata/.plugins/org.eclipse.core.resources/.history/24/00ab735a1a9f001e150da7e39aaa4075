@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:core="http://www.mulesoft.org/schema/mule/core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8081" doc:name="HTTP Listener Configuration"/>
+    <db:mysql-config name="MySQL_Configuration" host="localhost" port="3306" user="root" database="transiap" doc:name="MySQL Configuration"/>
+	<apikit:config name="Router" raml="TransIAP.raml" consoleEnabled="true" consolePath="console" keepRamlBaseUri="false" doc:name="Router"/>
+	<http:request-config name="HTTP_Request_Configuration" host="localhost" port="8081" doc:name="HTTP Request Configuration"/>
+	<flow name="Copy_of_transREST-main">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/*" doc:name="Copy_of_HTTP"/>
+		<apikit:router config-ref="Router" doc:name="Copy_of_APIkit Router"/>
+	</flow>
+	<flow name="Copy_of_transREST-console">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/console/*" doc:name="Copy_of_HTTP"/>
+		<apikit:console config-ref="Router" doc:name="Copy_of_APIkit Console"/>
+	</flow>
+	<flow name="/contenedores/{id}">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/contenedores/{id}" allowedMethods="GET" doc:name="Copy_of_HTTP"/>
+		<set-variable variableName="Contenedores" value="#[message.inboundProperties.accept]" doc:name="Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT * FROM `contenedor` JOIN `solicitud_descarga` ON contenedor.descarga = solicitud_descarga.id]]></db:parameterized-query>
+		</db:select>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[flowVars.Contenedores=='application/json']">
+				<json:object-to-json-transformer doc:name="Copy_of_Object to JSON"/>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="a539cb05-8565-4521-ab78-8d5b234f5006">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	contenedores: {
+		(payload map ((payload01 , indexOfPayload01) -> {
+			contenedor: {
+				idc: payload01.idc,
+				tipo: payload01.tipo,
+				peso: payload01.peso,
+				dimension: payload01.dimension,
+				precinto: payload01.precinto,
+				descarga: payload01.descarga,
+				id: payload01.idc
+			}
+		}))
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+	<flow name="/traslados/{id}">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/traslados/{id}" allowedMethods="GET" doc:name="Copy_of_Copy_of_HTTP"/>
+		<set-variable variableName="Traslados" value="#[message.inboundProperties.accept]" doc:name="Copy_of_Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT traslado.idt, traslado.fechaEntrega, traslado.estado, traslado.contenedor, direccion.ciudad, direccion.codigo_pais
+FROM `traslado`
+JOIN 
+    direccion ON direccion.id = traslado.destino
+JOIN
+    contenedor ON contenedor.idc = traslado.contenedor
+JOIN
+    solicitud_descarga ON contenedor.descarga = solicitud_descarga.id
+JOIN
+    compañia_naviera ON solicitud_descarga.naviera = compañia_naviera.id
+WHERE 
+    traslado.estado = 'entregado';]]></db:parameterized-query>
+		</db:select>
+		<choice doc:name="Copy_of_Copy_of_Choice">
+			<when expression="#[flowVars.Traslados=='application/json']">
+				<json:object-to-json-transformer doc:name="Copy_of_Copy_of_Object to JSON"/>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Transform Message" metadata:id="6f71e69c-a5bd-4637-bd84-948267a9dd54">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	traslados: {
+		(payload map ((payload01 , indexOfPayload01) -> {
+			traslado: {
+				idt: payload01.idt,
+				fechaEntrega: payload01.fechaEntrega,
+				estado: payload01.estado,
+				contenedor: payload01.contenedor,
+				ciudad: payload01.ciudad,
+				pais: payload01.codigo_pais
+			}
+		}))
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+	<flow name="/contenedor/{id}">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/contenedor/{id}" allowedMethods="GET" doc:name="/contenedor/{id}"/>
+		<set-variable variableName="Contenedor" value="#[message.inboundProperties.accept]" doc:name="Copy_of_Copy_of_Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Copy_of_Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT 
+    contenedor.idc,
+    contenedor.tipo,
+    contenedor.peso,
+    contenedor.dimension,
+    contenedor.precinto,
+    contenedor.descarga,
+    traslado.idt AS id_traslado,
+    traslado.fechaEntrega,
+    traslado.estado AS estado_traslado,
+    direccion.id AS id_direccion,
+    direccion.direccion AS direccion_entrega,
+    direccion.cp AS cp_entrega,
+    direccion.ciudad AS ciudad_entrega,
+    direccion.codigo_pais AS pais_entrega
+FROM contenedor
+JOIN traslado ON contenedor.idc = traslado.contenedor
+JOIN direccion ON traslado.destino = direccion.id
+WHERE contenedor.idc = #[message.inboundProperties.'http.query.params'.id];]]></db:parameterized-query>
+
+		</db:select>
+		<choice doc:name="Copy_of_Copy_of_Copy_of_Choice">
+			<when expression="#[flowVars.Contenedor=='application/json']">
+				<json:object-to-json-transformer doc:name="Copy_of_Copy_of_Copy_of_Object to JSON"/>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="6f71e69c-a5bd-4637-bd84-948267a9dd54">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	contenedor: {
+		idc: payload.idc,
+		tipo: payload.tipo,
+		dimension: payload.dimension,
+		peso: payload.peso,
+		precinto: payload.precinto,
+		descarga: payload.descarga,
+		traslado: {
+			idt: payload.id_traslado,
+			fechaEntrega: payload.fechaEntrega,
+			estado: payload.estado_traslado
+		},
+		direccion_entrega: {
+			direccion: payload.direccion_entrega,
+			cp: payload.cp_entrega,
+			cuidad: payload.ciudad_entrega,
+			codigo_pais: payload.pais_entrega
+		}
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+	<flow name="/traslados/">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/traslados/" allowedMethods="GET" doc:name="Copy_of_Copy_of_Copy_of_HTTP"/>
+		<set-variable variableName="TrasladoTransporte" value="#[message.inboundProperties.accept]" doc:name="Copy_of_Copy_of_Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Copy_of_Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT 
+    traslado.idt AS id_traslado,
+    traslado.fechaEntrega AS fecha_tope_entrega,
+    traslado.estado AS estado_traslado,
+    traslado.destino AS destino_traslado,
+    traslado.contenedor AS contenedor_traslado,
+    traslado.ultima_ubicacion AS ultima_ubicacion_traslado,
+    contenedor.tipo AS tipo_contenedor,
+    contenedor.dimension AS dimension_contenedor,
+    contenedor.peso AS peso_contenedor,
+    direccion.id AS id_direccion,
+    direccion.direccion AS direccion_entrega,
+    direccion.cp AS cp_entrega,
+    direccion.ciudad AS ciudad_entrega,
+    direccion.codigo_pais AS codigo_pais_direccion
+FROM traslado
+JOIN contenedor ON traslado.contenedor = contenedor.idc
+LEFT JOIN solicitud_transporte ON traslado.idt = solicitud_transporte.traslado
+LEFT JOIN direccion ON traslado.destino = direccion.id
+WHERE solicitud_transporte.id IS NULL OR solicitud_transporte.aprobada = 0;]]></db:parameterized-query>
+		</db:select>
+		<choice doc:name="Copy_of_Copy_of_Copy_of_Choice">
+			<when expression="#[flowVars.TrasladoTransporte=='application/json']">
+				<json:object-to-json-transformer doc:name="Copy_of_Copy_of_Copy_of_Object to JSON"/>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="6f71e69c-a5bd-4637-bd84-948267a9dd54">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	trasladoTransporte: {
+		traslado: {
+			idt: payload.id_traslado,
+			fechaEntrega: payload.fecha_tope_entrega,
+			estado: payload.estado_traslado,
+			destino: payload.destino_traslado,
+			contenedor: payload.contenedor_traslado,
+			ultimaUbicacion: payload.ultima_ubicacion_traslado as :string
+		},
+		contenedor: {
+			tipo: payload.tipo_contenedor,
+			dimension: payload.dimension_contenedor,
+			peso: payload.peso_contenedor
+		},
+		direccion: {
+			id: payload.id_direccion,
+			direccion: payload.codigo_pais_direccion ++ payload.direccion_entrega,
+			cp: payload.cp_entrega,
+			cuidad: payload.ciudad_entrega,
+			codigo_pais: payload.codigo_pais_direccion
+		}
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+	<flow name="/solicitudes/{id}">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/solicitudes/{id}" allowedMethods="GET" doc:name="Copy_of_Copy_of_Copy_of_HTTP"/>
+		<set-variable variableName="Solicitudes" value="#[message.inboundProperties.accept]" doc:name="Copy_of_Copy_of_Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Copy_of_Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT 
+    solicitud_transporte.id AS id_solicitud,
+    solicitud_transporte.timestamp AS timestamp_solicitud,
+    solicitud_transporte.aprobada AS aprobada_solicitud,
+    solicitud_transporte.terminada AS terminada_solicitud
+FROM solicitud_transporte
+JOIN traslado ON solicitud_transporte.traslado = traslado.idt;]]></db:parameterized-query>
+		</db:select>
+		<choice doc:name="Copy_of_Copy_of_Copy_of_Choice">
+			<when expression="#[flowVars.Solicitudes=='application/json']">
+				<json:object-to-json-transformer doc:name="Copy_of_Copy_of_Copy_of_Object to JSON"/>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="6f71e69c-a5bd-4637-bd84-948267a9dd54">
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	solicitudes: {
+		id: payload.id_solicitud[0],
+		timestamp: payload.timestamp_solicitud[0] as :date,
+		aprobada: payload.aprobada_solicitud[0] as :boolean,
+		terminada: payload.terminada_solicitud[0] as :boolean
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+	<flow name="put_traslados">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/traslados/{id}" allowedMethods="PUT" doc:name="Copy_of_HTTP"/>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[message.inboundProperties['Content-Type'] == 'application/json']">
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="2011aeb1-0759-4c53-9106-cf32ffe0a3a8">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	estado: payload.estado
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="52867807-57a4-4d99-8c5a-95455c51c48a">
+					<dw:input-payload mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	estado: payload.traslado.estado
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+		<db:update config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[UPDATE traslado SET estado = #[payload.estado], ultima_ubicacion = NULL WHERE idt = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+		</db:update>
+		<set-payload value="#[&quot;OK&quot;]" doc:name="Copy_of_Set Payload"/>
+	</flow>
+	<flow name="put_asignado_solicitud_transporte">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/solicitud/{id}" allowedMethods="PUT" doc:name="Copy_of_HTTP"/>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[message.inboundProperties['Content-Type'] == 'application/json']">
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="4461612b-ade6-4d89-b131-5595d3596b05">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+payload.aprobada]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="7e6b784c-4a11-4d75-9283-af4277398af4">
+					<dw:input-payload mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+payload.solicitud.aprobada]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+		<db:update config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[UPDATE solicitud_transporte SET aprobada = #[payload] WHERE id = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+		</db:update>
+		<set-payload value="#[&quot;OK&quot;]" doc:name="Copy_of_Set Payload"/>
+	</flow>
+	<flow name="post_solicitud_traslado">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/traslado/{id}/solicitudes" allowedMethods="POST" doc:name="Copy_of_HTTP"/>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[message.inboundProperties['Content-Type'] == 'application/json']">
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="0ea184eb-5a02-4878-b83a-011330615a2d">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	vehiculo: payload.vehiculo
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="51824d51-4e31-4f75-9482-458670f77ec1">
+					<dw:input-payload mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	vehiculo: payload.solicitud.vehiculo
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+		<db:insert config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[INSERT INTO solicitud_transporte(traslado, vehiculo) VALUES(#[message.inboundProperties.'http.uri.params'.id], #[payload.vehiculo]);]]></db:parameterized-query>
+		</db:insert>
+		<set-payload value="#[&quot;OK&quot;]" doc:name="Copy_of_Set Payload"/>
+	</flow>
+	<flow name="post_ubicacion_traslado">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/traslado/{id}/localizacion" allowedMethods="POST" doc:name="Copy_of_HTTP"/>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[message.inboundProperties['Content-Type'] == 'application/json']">
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="056f003c-1a78-4dd9-b4a8-6fefdc2920dd">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	latitud: payload.latitud,
+	longitud: payload.longitud
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="441ad697-fee7-42fd-8db0-5a383dd30e36">
+					<dw:input-payload mimeType="application/xml"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	latitud: payload.localizacion.latitud,
+	longitud: payload.localizacion.longitud
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+		<db:insert config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[INSERT INTO locallizacion_gps(traslado, latitud, longitud) VALUES(#[message.inboundProperties.'http.uri.params'.id], #[payload.latitud], #[payload.longitud]);]]></db:parameterized-query>
+		</db:insert>
+		<set-payload value="#[&quot;OK&quot;]" doc:name="Copy_of_Set Payload"/>
+	</flow>
+	<flow name="get_solicitud_traslado">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/solicitud/{id}" allowedMethods="GET" doc:name="Copy_of_HTTP"/>
+		<set-variable variableName="formato" value="#[message.inboundProperties['Accept']]" doc:name="Copy_of_Variable"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Copy_of_Database">
+			<db:parameterized-query><![CDATA[SELECT solicitud_transporte.id, solicitud_transporte.timestamp, solicitud_transporte.aprobada, solicitud_transporte.terminada, 
+vehiculo.matricula, vehiculo.PMA, vehiculo.ETN,
+transportista.nombre, transportista.licencia, transportista.externo, transportista.id as tid
+FROM solicitud_transporte
+JOIN vehiculo on solicitud_transporte.vehiculo = vehiculo.matricula
+JOIN transportista on vehiculo.transportista = transportista.id
+WHERE solicitud_transporte.id = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+		</db:select>
+		<set-payload value="#[payload[0]]" doc:name="Copy_of_Set Payload"/>
+		<set-variable variableName="info" value="#[payload]" doc:name="Copy_of_Variable"/>
+		<http:request config-ref="HTTP_Request_Configuration" path="/iap/rest/direccion/#[payload.tid]" method="GET" doc:name="Copy_of_HTTP">
+			<http:request-builder>
+				<http:header headerName="Accept" value="application/json"/>
+			</http:request-builder>
+		</http:request>
+		<choice doc:name="Copy_of_Choice">
+			<when expression="#[flowVars.formato == 'application/json']">
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="582df744-a603-487c-870e-79f9b7ca226c">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/json
+---
+{
+	id: flowVars.info.id,
+	timestamp: flowVars.info.timestamp as :string,
+	aprobada: flowVars.info.aprobada,
+	terminada: flowVars.info.terminada,
+	matricula: flowVars.info.matricula,
+	PMA: flowVars.info.PMA,
+	ETN: flowVars.info.ETN,
+	nombre: flowVars.info.nombre,
+	licencia: flowVars.info.licencia,
+	externo: flowVars.info.externo,
+	codigo_postal: payload.codigoPostal,
+	ciudad: payload.ciudad,
+	direccion: payload.direccion
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</when>
+			<otherwise>
+				<dw:transform-message doc:name="Copy_of_Transform Message" metadata:id="4f944073-d458-43ef-86ee-0b0e8eb3d2d0">
+					<dw:input-payload mimeType="application/json"/>
+					<dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	solicitud: {
+		id: flowVars.info.id,
+		timestamp: flowVars.info.timestamp as :string,
+		aprobada: flowVars.info.aprobada as :string,
+		terminada: flowVars.info.terminada as :string,
+		matricula: flowVars.info.matricula,
+		PMA: flowVars.info.PMA,
+		ETN: flowVars.info.ETN,
+		nombre: flowVars.info.nombre,
+		licencia: flowVars.info.licencia,
+		externo: flowVars.info.externo as :string,
+		codigo_postal: payload.codigoPostal,
+		ciudad: payload.ciudad,
+		direccion: payload.direccion
+	}
+}]]></dw:set-payload>
+				</dw:transform-message>
+			</otherwise>
+		</choice>
+	</flow>
+
+</mule>

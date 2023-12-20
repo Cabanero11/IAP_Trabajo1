@@ -1,0 +1,276 @@
+#%RAML 1.0
+
+title: Dirección Postal REST API
+description: IAP Proyecto ABP Entregable 2 - Dirección Postal REST API
+baseUri: https://pedvalar.webs.upv.es/iap/rest
+protocols:
+  - HTTPS
+
+mediaType:
+  - application/json
+  - application/xml
+
+# # # # # # # # # #
+# TIPOS DE DATOS  #
+# # # # # # # # # #
+types:
+  contenedor:
+    type: object
+    properties: 
+      idc: string
+      tipo: string
+      peso: integer
+      dimension: string
+      precinto: integer
+      descarga: integer
+
+  traslado:
+    type: object
+    properties: 
+      idt: string
+      fechaEntrega: string
+      estado: string
+      destino: string
+      contenedor: string
+      ultima_ubicacion: datetime
+
+  localizacion_GPS:
+    type: object
+    properties: 
+      timestamp: datetime
+      traslado: string
+      latitud: integer
+      longitud: integer
+
+  solicitud_transporte:
+    type: object
+    properties: 
+      id: integer
+      timestamp: datetime
+      aprobada: integer
+      terminada: integer
+      traslado: string
+      vehiculo: string
+
+# # # # # # # # #
+# RECURSOS      #
+# # # # # # # # #
+
+/contenedores:
+  /{id}:
+    get:
+      description: Listar contenedores de una naviera
+      responses: 
+        200:
+          body: 
+            type: contenedor[]
+        400:
+          body: 
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+
+/traslados:
+  get:
+    description: Listar traslados sin solicitud de transporte asignada
+    responses: 
+        200:
+          body:
+            type: traslado[]
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+  /{id}:
+    get:
+      description: Listar traslados de una naviera
+      responses: 
+        200:
+          body:
+            type: traslado[]
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+
+/contenedor:
+  /{id}:
+    get:
+      description: Consultar informacion de un contenedor
+      responses: 
+        200:
+          body:
+            type: contenedor
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+
+/traslado:
+  /{id}:
+    put:
+      description: Cambiar el estado de un traslado concreto
+      body: 
+        type: string
+      responses:
+        200:
+          body:
+            text/plain:
+              type: string
+              example: "OK"
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+              
+    /localizacion:
+      post:
+        description: Añadir una localizacion a un traslado
+        body:
+          type: localizacion_GPS
+        responses:
+          200:
+            body:
+              text/plain:
+                type: string
+                example: "OK"
+          400:
+            body:
+              text/plain:
+                type: string
+                example: "Bad Request"
+          500:
+            body:
+              text/plain:
+                type: string
+                example: "Internal Server Error"
+                
+    /solicitudes:
+      post:
+        description: Solicitar un transporte para un traslado
+        body:
+          type: solicitud_transporte
+        responses:
+          200:
+            body:
+              text/plain:
+                type: string
+                example: "OK"
+          400:
+            body:
+              text/plain:
+                type: string
+                example: "Bad Request"
+          500:
+            body:
+              text/plain:
+                type: string
+                example: "Internal Server Error"
+
+/solicitudes:
+  /{id}:
+    get:
+      description: Consultar las solicitudes de transporte para un traslado
+      queryParameters: 
+        aprobada:
+          type: integer
+          required: false
+      responses: 
+        200:
+          body: 
+            type: solicitud_transporte[]
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"
+/solicitud:
+  put:
+    description: Aprobar o denegar una solicitud  de transporte especifica
+    body:
+      type: integer
+    responses:
+      200:
+        body:
+          text/plain:
+            type: string
+            example: "OK"
+      400:
+        body:
+          text/plain:
+            type: string
+            example: "Bad Request"
+      500:
+        body:
+          text/plain:
+            type: string
+            example: "Internal Server Error"
+  delete:
+    description: Borrar una solicitud de transporte
+    responses:
+      200:
+        body:
+          text/plain:
+            type: string
+            example: "OK"
+      400:
+        body:
+          text/plain:
+            type: string
+            example: "Bad Request"
+      500:
+        body:
+          text/plain:
+            type: string
+            example: "Internal Server Error"
+  /{id}:
+    get:
+      description: Consultar informacion de una solicitud de transporte concreta
+      responses: 
+        200:
+          body: 
+            type: solicitud_transporte
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"

@@ -12148,3 +12148,361 @@ java.lang.ClassNotFoundException: com.mysql.jdbc.AbandonedConnectionCleanupThrea
 *   JMX Agent                                                        *
 *   Wrapper Manager                                                  *
 **********************************************************************
+2023-12-17 19:52:01,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Stopping app 'transrest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-17 19:52:01,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: Copy_of_transREST-main
+2023-12-17 19:52:01,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Stopped listener on http://localhost:8081
+2023-12-17 19:52:01,749 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: Copy_of_transREST-main.stage1
+2023-12-17 19:52:01,827 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: Copy_of_transREST-console
+2023-12-17 19:52:01,827 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: Copy_of_transREST-console.stage1
+2023-12-17 19:52:01,922 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: /contenedores/{id}
+2023-12-17 19:52:01,922 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: /contenedores/{id}.stage1
+2023-12-17 19:52:02,031 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: /traslados/{id}
+2023-12-17 19:52:02,031 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: /traslados/{id}.stage1
+2023-12-17 19:52:02,235 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: /contenedor/{id}
+2023-12-17 19:52:02,235 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: /contenedor/{id}.stage1
+2023-12-17 19:52:02,439 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: /traslados/
+2023-12-17 19:52:02,439 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: /traslados/.stage1
+2023-12-17 19:52:02,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Stopping flow: /solicitudes/{id}
+2023-12-17 19:52:02,643 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Stopping service: /solicitudes/{id}.stage1
+2023-12-17 19:52:02,847 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Stopping model: _muleSystemModel
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopping ResourceManager
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Stopped ResourceManager
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Disposing app 'transrest'                                +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing RegistryBroker
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: Copy_of_transREST-main
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: Copy_of_transREST-main.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: Copy_of_transREST-console
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: Copy_of_transREST-console.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: /contenedores/{id}
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: /contenedores/{id}.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: /traslados/{id}
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: /traslados/{id}.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: /contenedor/{id}
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: /contenedor/{id}.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: /traslados/
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: /traslados/.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Disposing flow: /solicitudes/{id}
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Disposing service: /solicitudes/{id}.stage1
+2023-12-17 19:52:02,850 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Disposing model: _muleSystemModel
+2023-12-17 19:52:02,866 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Closing org.mule.config.spring.MuleArtifactContext@169ddd47: startup date [Sun Dec 17 19:51:10 CET 2023]; root of context hierarchy
+2023-12-17 19:52:02,866 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application "transrest" shut down normally on: 17/12/23 19:52      *
+* Up for: 0 days, 0 hours, 0 mins, 51.665 sec                        *
+**********************************************************************
+2023-12-17 19:52:04,633 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'transrest'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-17 19:52:04,647 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-17 19:52:04,647 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-17 19:52:04,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-17 19:52:04,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-17 19:52:04,662 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@33bdf3e7: startup date [Sun Dec 17 19:52:04 CET 2023]; root of context hierarchy
+2023-12-17 19:52:04,912 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-17 19:52:05,085 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx2.log
+2023-12-17 19:52:05,085 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx2.log
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-main
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1731f23
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-main.stage1
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-console
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7a7fcbdb
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-console.stage1
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedores/{id}
+2023-12-17 19:52:05,100 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@37db8f2f
+2023-12-17 19:52:05,116 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedores/{id}.stage1
+2023-12-17 19:52:05,116 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/{id}
+2023-12-17 19:52:05,116 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3424b8b4
+2023-12-17 19:52:05,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/{id}.stage1
+2023-12-17 19:52:05,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedor/{id}
+2023-12-17 19:52:05,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3bd2418
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedor/{id}.stage1
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@750d0b1d
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/.stage1
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /solicitudes/{id}
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@153db38e
+2023-12-17 19:52:05,132 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /solicitudes/{id}.stage1
+2023-12-17 19:52:30,097 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/xml 
+2023-12-17 19:52:30,097 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/direccion/{id}:application/json 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/xml 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/json 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitud/{id} 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedor/{id} 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados 
+2023-12-17 19:52:30,105 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados/{id} 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedores/{id} 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/xml 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/json 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> delete:/solicitud 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/solicitud:application/xml 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/solicitud:application/json 
+2023-12-17 19:52:30,106 [Mule.app.deployer.monitor.1.thread.1] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitudes/{id} 
+2023-12-17 19:52:30,122 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2023-12-17 19:52:30,138 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-17 19:52:30,138 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-17 19:52:30,138 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'transrest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-17 19:52:30,138 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-12-17 19:52:30,138 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-12-17 19:52:30,153 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8081
+2023-12-17 19:52:30,153 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-12-17 19:52:30,153 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Copy_of_transREST-main
+2023-12-17 19:52:30,153 [Mule.app.deployer.monitor.1.thread.1] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Copy_of_transREST-main.stage1
+2023-12-20 10:36:29,949 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'transrest'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-20 10:36:30,344 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-20 10:36:30,422 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-20 10:36:30,501 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-20 10:36:30,501 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-20 10:36:30,611 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@33f349ae: startup date [Wed Dec 20 10:36:30 CET 2023]; root of context hierarchy
+2023-12-20 10:36:32,289 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2023-12-20 10:36:32,605 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-20 10:36:34,625 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-20 10:36:34,895 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx2.log
+2023-12-20 10:36:34,895 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx2.log
+2023-12-20 10:36:35,036 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-20 10:36:35,053 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-main
+2023-12-20 10:36:35,053 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4fea9f19
+2023-12-20 10:36:35,083 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-main.stage1
+2023-12-20 10:36:35,083 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-console
+2023-12-20 10:36:35,083 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@4af50246
+2023-12-20 10:36:35,099 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-console.stage1
+2023-12-20 10:36:35,099 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedores/{id}
+2023-12-20 10:36:35,099 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5bfdc92b
+2023-12-20 10:36:35,099 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedores/{id}.stage1
+2023-12-20 10:36:35,303 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/{id}
+2023-12-20 10:36:35,303 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@43aa767
+2023-12-20 10:36:35,303 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/{id}.stage1
+2023-12-20 10:36:35,303 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedor/{id}
+2023-12-20 10:36:35,303 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@26f07261
+2023-12-20 10:36:35,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedor/{id}.stage1
+2023-12-20 10:36:35,318 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/
+2023-12-20 10:36:35,318 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@7a7bb083
+2023-12-20 10:36:35,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/.stage1
+2023-12-20 10:36:35,318 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /solicitudes/{id}
+2023-12-20 10:36:35,318 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3dabdd11
+2023-12-20 10:36:35,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /solicitudes/{id}.stage1
+2023-12-20 10:36:35,318 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put_traslados
+2023-12-20 10:36:35,318 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1d982fbe
+2023-12-20 10:36:35,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put_traslados.stage1
+2023-12-20 10:36:35,318 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put_asignado_solicitud_transporte
+2023-12-20 10:36:35,318 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5929059c
+2023-12-20 10:36:35,318 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put_asignado_solicitud_transporte.stage1
+2023-12-20 10:36:35,334 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post_solicitud_traslado
+2023-12-20 10:36:35,334 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@744673f3
+2023-12-20 10:36:35,334 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post_solicitud_traslado.stage1
+2023-12-20 10:36:35,334 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post_ubicacion_traslado
+2023-12-20 10:36:35,334 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@5add7380
+2023-12-20 10:36:35,334 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post_ubicacion_traslado.stage1
+2023-12-20 10:36:35,334 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get_solicitud_traslado
+2023-12-20 10:36:35,334 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@755a90a6
+2023-12-20 10:36:35,334 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get_solicitud_traslado.stage1
+2023-12-20 10:36:36,770 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/xml 
+2023-12-20 10:36:36,770 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/json 
+2023-12-20 10:36:36,770 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitud/{id} 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/solicitudes:application/xml 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/solicitudes:application/json 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedor/{id} 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados/{id} 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/localizacion:application/xml 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/localizacion:application/json 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedores/{id} 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/xml 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/json 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> delete:/solicitud 
+2023-12-20 10:36:36,783 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitudes/{id} 
+2023-12-20 10:36:36,830 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2023-12-20 10:36:36,986 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-12-20 10:36:37,143 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-20 10:36:37,143 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-20 10:36:37,157 [main] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'gateway-message-source:http://localhost:8081/traslados/%7Bid%7D'. The previous object will be overwritten.
+2023-12-20 10:36:37,157 [main] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'gateway-message-source:http://localhost:8081/solicitud/%7Bid%7D'. The previous object will be overwritten.
+2023-12-20 10:36:37,159 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-12-20 10:36:37,159 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'transrest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-20 10:36:37,174 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-12-20 10:36:37,174 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-12-20 10:36:37,206 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8081
+2023-12-20 10:36:37,221 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-12-20 10:36:37,221 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Copy_of_transREST-main
+2023-12-20 10:36:37,221 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Copy_of_transREST-main.stage1
+2023-12-20 10:36:37,519 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://localhost:8081/console                            *
+********************************************************************************
+2023-12-20 10:36:37,519 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://localhost:8081/console                            *
+********************************************************************************
+2023-12-20 10:36:37,519 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Copy_of_transREST-console
+2023-12-20 10:36:37,519 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Copy_of_transREST-console.stage1
+2023-12-20 10:36:38,008 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /contenedores/{id}
+2023-12-20 10:36:38,008 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /contenedores/{id}.stage1
+2023-12-20 10:36:38,024 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /traslados/{id}
+2023-12-20 10:36:38,024 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /traslados/{id}.stage1
+2023-12-20 10:36:38,024 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /contenedor/{id}
+2023-12-20 10:36:38,024 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /contenedor/{id}.stage1
+2023-12-20 10:36:38,024 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /traslados/
+2023-12-20 10:36:38,024 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /traslados/.stage1
+2023-12-20 10:36:38,039 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /solicitudes/{id}
+2023-12-20 10:36:38,039 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /solicitudes/{id}.stage1
+2023-12-20 10:36:38,039 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put_traslados
+2023-12-20 10:36:38,039 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put_traslados.stage1
+2023-12-20 10:36:38,039 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put_asignado_solicitud_transporte
+2023-12-20 10:36:38,039 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put_asignado_solicitud_transporte.stage1
+2023-12-20 10:36:38,055 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post_solicitud_traslado
+2023-12-20 10:36:38,055 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post_solicitud_traslado.stage1
+2023-12-20 10:36:38,059 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post_ubicacion_traslado
+2023-12-20 10:36:38,059 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post_ubicacion_traslado.stage1
+2023-12-20 10:36:38,059 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get_solicitud_traslado
+2023-12-20 10:36:38,059 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get_solicitud_traslado.stage1
+2023-12-20 10:36:38,322 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-12-20 10:36:43,309 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: transrest                                             *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************
+2023-12-20 10:43:24,556 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Initializing app 'transrest'                             +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-20 10:43:24,964 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising RegistryBroker
+2023-12-20 10:43:25,027 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Starting discovery of extensions
+2023-12-20 10:43:25,102 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Discovered 1 extensions
+2023-12-20 10:43:25,102 [main] INFO  org.mule.module.extension.internal.manager.DefaultExtensionManager - Registering extension validation (version 3.9)
+2023-12-20 10:43:25,149 [main] INFO  org.mule.config.spring.MuleArtifactContext - Refreshing org.mule.config.spring.MuleArtifactContext@33f349ae: startup date [Wed Dec 20 10:43:25 CET 2023]; root of context hierarchy
+2023-12-20 10:43:26,441 [main] WARN  org.mule.transport.http.builder.HttpHeaderDefinitionParser - Schema warning: Use of element <header> is deprecated.  HTTP transport is deprecated and will be removed in Mule 4.0. Use HTTP module instead..
+2023-12-20 10:43:26,654 [main] INFO  org.mule.config.spring.processors.NoDevkitInjectorProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2023-12-20 10:43:27,933 [main] WARN  org.mule.module.ognl.expression.OgnlExpressionEvaluator - OGNL module is deprecated and will be removed in Mule 4.0. Use MEL expressions instead.
+2023-12-20 10:43:28,160 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-tx-log\tx2.log
+2023-12-20 10:43:28,160 [main] INFO  org.mule.util.journal.TransactionJournal - Using files for tx logs C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx1.log and C:\Users\Antonio\AnypointStudio\workspace\.mule\.\.mule\transrest\queue-xa-tx-log\tx2.log
+2023-12-20 10:43:28,270 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Initialising model: _muleSystemModel
+2023-12-20 10:43:28,270 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-main
+2023-12-20 10:43:28,270 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@6e466fdf
+2023-12-20 10:43:28,286 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-main.stage1
+2023-12-20 10:43:28,301 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: Copy_of_transREST-console
+2023-12-20 10:43:28,301 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3fcb737
+2023-12-20 10:43:28,301 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: Copy_of_transREST-console.stage1
+2023-12-20 10:43:28,301 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedores/{id}
+2023-12-20 10:43:28,301 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@24d097c8
+2023-12-20 10:43:28,317 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedores/{id}.stage1
+2023-12-20 10:43:28,475 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/{id}
+2023-12-20 10:43:28,475 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@ab2e887
+2023-12-20 10:43:28,475 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/{id}.stage1
+2023-12-20 10:43:28,475 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /contenedor/{id}
+2023-12-20 10:43:28,475 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@351fadfa
+2023-12-20 10:43:28,490 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /contenedor/{id}.stage1
+2023-12-20 10:43:28,490 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /traslados/
+2023-12-20 10:43:28,490 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2bfa5678
+2023-12-20 10:43:28,490 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /traslados/.stage1
+2023-12-20 10:43:28,490 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: /solicitudes/{id}
+2023-12-20 10:43:28,490 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@2f025e9e
+2023-12-20 10:43:28,490 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: /solicitudes/{id}.stage1
+2023-12-20 10:43:28,490 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put_traslados
+2023-12-20 10:43:28,490 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@67d55a46
+2023-12-20 10:43:28,490 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put_traslados.stage1
+2023-12-20 10:43:28,490 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: put_asignado_solicitud_transporte
+2023-12-20 10:43:28,490 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@69c6e5
+2023-12-20 10:43:28,506 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: put_asignado_solicitud_transporte.stage1
+2023-12-20 10:43:28,506 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post_solicitud_traslado
+2023-12-20 10:43:28,506 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@3ce2c5f6
+2023-12-20 10:43:28,506 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post_solicitud_traslado.stage1
+2023-12-20 10:43:28,506 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: post_ubicacion_traslado
+2023-12-20 10:43:28,506 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@1e5190bd
+2023-12-20 10:43:28,506 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: post_ubicacion_traslado.stage1
+2023-12-20 10:43:28,506 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Initialising flow: get_solicitud_traslado
+2023-12-20 10:43:28,506 [main] INFO  org.mule.exception.DefaultMessagingExceptionStrategy - Initialising exception listener: org.mule.exception.DefaultMessagingExceptionStrategy@38f569d
+2023-12-20 10:43:28,506 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Initialising service: get_solicitud_traslado.stage1
+2023-12-20 10:43:29,515 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/xml 
+2023-12-20 10:43:29,515 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/traslado/{id}:application/json 
+2023-12-20 10:43:29,515 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitud/{id} 
+2023-12-20 10:43:29,515 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> delete:/solicitud/{id} 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/solicitudes:application/xml 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/solicitudes:application/json 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedor/{id} 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/traslados/{id} 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/localizacion:application/xml 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> post:/traslado/{id}/localizacion:application/json 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/contenedores/{id} 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/xml 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource-ContentType triplet has no implementation -> put:/solicitud:application/json 
+2023-12-20 10:43:29,526 [main] WARN  org.mule.module.apikit.Configuration - Action-Resource pair has no implementation -> get:/solicitudes/{id} 
+2023-12-20 10:43:29,542 [main] INFO  org.mule.module.apikit.Configuration - Building resource URI cache...
+2023-12-20 10:43:29,646 [main] INFO  org.mule.api.security.tls.TlsProperties - Loading configuration file: tls-default.conf
+2023-12-20 10:43:29,772 [main] INFO  org.mule.config.spring.SpringXmlConfigurationBuilder - Configured Mule using "org.mule.config.spring.SpringXmlConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-20 10:43:29,772 [main] INFO  org.mule.config.builders.AutoConfigurationBuilder - Configured Mule using "org.mule.config.builders.AutoConfigurationBuilder" with configuration resource(s): "[ConfigResource{resourceName='C:\Users\Antonio\AnypointStudio\workspace\.mule\apps\transrest\transrest.xml'}]"
+2023-12-20 10:43:29,787 [main] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'gateway-message-source:http://localhost:8081/traslados/%7Bid%7D'. The previous object will be overwritten.
+2023-12-20 10:43:29,787 [main] WARN  org.mule.config.spring.SpringRegistry - Spring registry already contains an object named 'gateway-message-source:http://localhost:8081/solicitud/%7Bid%7D'. The previous object will be overwritten.
+2023-12-20 10:43:29,787 [main] INFO  com.mulesoft.module.policies.lifecyle.GateKeeper - GateKeeper Mode: DISABLED
+2023-12-20 10:43:29,787 [main] INFO  org.mule.module.launcher.application.DefaultMuleApplication - 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Starting app 'transrest'                                 +
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2023-12-20 10:43:29,803 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Starting ResourceManager
+2023-12-20 10:43:29,803 [main] INFO  org.mule.util.queue.QueueXaResourceManager - Started ResourceManager
+2023-12-20 10:43:29,837 [main] INFO  org.mule.module.http.internal.listener.DefaultHttpListenerConfig - Listening for requests on http://localhost:8081
+2023-12-20 10:43:29,837 [main] INFO  org.mule.lifecycle.AbstractLifecycleManager - Starting model: _muleSystemModel
+2023-12-20 10:43:29,837 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Copy_of_transREST-main
+2023-12-20 10:43:29,837 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Copy_of_transREST-main.stage1
+2023-12-20 10:43:30,070 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://localhost:8081/console                            *
+********************************************************************************
+2023-12-20 10:43:30,070 [main] INFO  org.mule.module.apikit.Configuration - 
+********************************************************************************
+* APIKit Console URL: http://localhost:8081/console                            *
+********************************************************************************
+2023-12-20 10:43:30,070 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: Copy_of_transREST-console
+2023-12-20 10:43:30,070 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: Copy_of_transREST-console.stage1
+2023-12-20 10:43:30,438 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /contenedores/{id}
+2023-12-20 10:43:30,438 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /contenedores/{id}.stage1
+2023-12-20 10:43:30,438 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /traslados/{id}
+2023-12-20 10:43:30,438 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /traslados/{id}.stage1
+2023-12-20 10:43:30,438 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /contenedor/{id}
+2023-12-20 10:43:30,438 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /contenedor/{id}.stage1
+2023-12-20 10:43:30,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /traslados/
+2023-12-20 10:43:30,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /traslados/.stage1
+2023-12-20 10:43:30,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: /solicitudes/{id}
+2023-12-20 10:43:30,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: /solicitudes/{id}.stage1
+2023-12-20 10:43:30,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put_traslados
+2023-12-20 10:43:30,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put_traslados.stage1
+2023-12-20 10:43:30,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: put_asignado_solicitud_transporte
+2023-12-20 10:43:30,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: put_asignado_solicitud_transporte.stage1
+2023-12-20 10:43:30,447 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post_solicitud_traslado
+2023-12-20 10:43:30,447 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post_solicitud_traslado.stage1
+2023-12-20 10:43:30,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: post_ubicacion_traslado
+2023-12-20 10:43:30,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: post_ubicacion_traslado.stage1
+2023-12-20 10:43:30,463 [main] INFO  org.mule.construct.FlowConstructLifecycleManager - Starting flow: get_solicitud_traslado
+2023-12-20 10:43:30,463 [main] INFO  org.mule.processor.SedaStageLifecycleManager - Starting service: get_solicitud_traslado.stage1
+2023-12-20 10:43:30,653 [main] INFO  org.mule.module.management.agent.WrapperManagerAgent - This JVM hasn't been launched by the wrapper, the agent will not run.
+2023-12-20 10:43:35,654 [main] INFO  org.mule.DefaultMuleContext - 
+**********************************************************************
+* Application: transrest                                             *
+* OS encoding: \, Mule encoding: UTF-8                               *
+*                                                                    *
+* Agents Running:                                                    *
+*   Batch module default engine                                      *
+*   JMX Agent                                                        *
+*   Wrapper Manager                                                  *
+**********************************************************************

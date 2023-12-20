@@ -151,29 +151,50 @@ types:
             text/plain:
               type: string
               example: "Internal Server Error"
-
-/direccion:
-  /{id}:
-    post:
-      description: Añadir una localizacion a un traslado
-      body:
-        type: localizacion_GPS
-      responses:
-        200:
-          body:
-            text/plain:
-              type: string
-              example: "OK"
-        400:
-          body:
-            text/plain:
-              type: string
-              example: "Bad Request"
-        500:
-          body:
-            text/plain:
-              type: string
-              example: "Internal Server Error"
+              
+    /localizacion:
+      post:
+        description: Añadir una localizacion a un traslado
+        body:
+          type: localizacion_GPS
+        responses:
+          200:
+            body:
+              text/plain:
+                type: string
+                example: "OK"
+          400:
+            body:
+              text/plain:
+                type: string
+                example: "Bad Request"
+          500:
+            body:
+              text/plain:
+                type: string
+                example: "Internal Server Error"
+                
+    /solicitudes:
+      post:
+        description: Solicitar un transporte para un traslado
+        body:
+          type: solicitud_transporte
+        responses:
+          200:
+            body:
+              text/plain:
+                type: string
+                example: "OK"
+          400:
+            body:
+              text/plain:
+                type: string
+                example: "Bad Request"
+          500:
+            body:
+              text/plain:
+                type: string
+                example: "Internal Server Error"
 
 /solicitudes:
   /{id}:
@@ -197,7 +218,6 @@ types:
             text/plain:
               type: string
               example: "Internal Server Error"
-
 /solicitud:
   put:
     description: Aprobar o denegar una solicitud  de transporte especifica
@@ -219,47 +239,9 @@ types:
           text/plain:
             type: string
             example: "Internal Server Error"
-  delete:
-    description: Borrar una solicitud de transporte
-    responses:
-      200:
-        body:
-          text/plain:
-            type: string
-            example: "OK"
-      400:
-        body:
-          text/plain:
-            type: string
-            example: "Bad Request"
-      500:
-        body:
-          text/plain:
-            type: string
-            example: "Internal Server Error"
-  post:
-    description: Solicitar un transporte para un traslado
-    body:
-      type: solicitud_transporte
-    responses:
-        200:
-          body:
-            text/plain:
-              type: string
-              example: "OK"
-        400:
-          body:
-            text/plain:
-              type: string
-              example: "Bad Request"
-        500:
-          body:
-            text/plain:
-              type: string
-              example: "Internal Server Error"
   /{id}:
     get:
-      description: Consultar informacion de una solicitud de transporte concreta
+      description: Consultar información de una solicitud de transporte concreta
       responses: 
         200:
           body: 
@@ -274,3 +256,21 @@ types:
             text/plain:
               type: string
               example: "Internal Server Error"
+    delete:
+      description: Borrar una solicitud de transporte
+      responses:
+        200:
+          body:
+            text/plain:
+              type: string
+              example: "OK"
+        400:
+          body:
+            text/plain:
+              type: string
+              example: "Bad Request"
+        500:
+          body:
+            text/plain:
+              type: string
+              example: "Internal Server Error"  
