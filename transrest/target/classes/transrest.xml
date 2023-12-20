@@ -444,5 +444,29 @@ WHERE solicitud_transporte.id = #[message.inboundProperties.'http.uri.params'.id
 			</otherwise>
 		</choice>
 	</flow>
+	<flow name="/solicitud/{id}/delete">
+		<http:listener config-ref="HTTP_Listener_Configuration" path="/solicitud/{id}" allowedMethods="DELETE" doc:name="HTTP"/>
+		<db:select config-ref="MySQL_Configuration" doc:name="Database">
+			<db:parameterized-query><![CDATA[SELECT * FROM solicitud_transporte WHERE id = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+    </db:select>
+    
+    <choice doc:name="Choice">
+        <!-- Si la solicitud se encuentra en la base de datos -->
+        <when expression="#[payload != null and payload.size() > 0]">
+            <!-- Mapea la respuesta de la base de datos al formato deseado (puedes ajustar según tu estructura XML) -->
+            <set-payload value="#[payload[0]]" doc:name="Set Payload"/>
+        </when>
+        <!-- Si la solicitud no se encuentra -->
+        <otherwise>
+            <set-payload value="#[&quot;Solicitud no encontrada&quot;]" doc:name="Set Payload"/>
+        </otherwise>
+    </choice>
+		<db:delete config-ref="MySQL_Configuration" doc:name="Database">
+			<db:parameterized-query><![CDATA[DELETE FROM solicitud_transporte WHERE id = #[message.inboundProperties.'http.uri.params'.id]]]></db:parameterized-query>
+		</db:delete>
+		<set-payload value="#[&quot;DELETE OK&quot;]" doc:name="Set Payload"/>
+    
+    <!-- Choice para manejar el resultado del DELETE -->
+	</flow>
 
 </mule>
